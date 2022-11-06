@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+                        <a href="" class="btn btn-success" id="menu-toggle">Toggle Menu</a> <!-- pwede ito ilagay sa loob ng navbar-->
                         <p>What is Lorem Ipsum?
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             Why do we use it?
@@ -33,9 +33,11 @@
             </div>
         </div>
         <script>
-        $('#menu-toggle').click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
+        $('#menu-toggle').click(function(e) {  //(" pag ka click daw nung id: menu toggle")  ipreprevent nya mapunta siya sa < a href = # > 
+            e.preventDefault(); // ipreprevent ng jquery nato yung pag redirect nung a.href sa empty location 
+            $("#wrapper").toggleClass("toggled"); // since ito ay function ang function na binigay dito ay
+            // pag ka click  nung button ay mag bubukas yung wrapper 
+            // di ito mag papakita kung hindi na ayos yung design nya sa sidebar.css
         });
     </script>
     </div>
