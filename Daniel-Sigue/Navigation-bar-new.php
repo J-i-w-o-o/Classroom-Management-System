@@ -32,7 +32,7 @@ if (isset($_SESSION['user'])) {
                 <ul>
                     <li><a href="#"><i class="fas fa-search"></i></a></li>
                     <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                    <li><a href="logout.php"><i class="fas fa-power-off"></i></a></li>
+                    <li><a href="#"><i class="fas fa-power-off"></i></a></li>
                 </ul>
             </div>
         </div>

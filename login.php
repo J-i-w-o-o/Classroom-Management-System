@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-include('./Components/Database.php');?>
+include('./Components/Database.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,9 +28,9 @@ include('./Components/Database.php');?>
       </div>
       <div class="pass">Forgot Password?</div>
       <input type="submit" value="Login" name="submit">
-    <!--  <div class="signup_link">
+      <div class="signup_link">
         Don't have an account?<a href="#">Send an Email</a>
-      </div>-->
+
     </form>
   </div>
   <?php
@@ -42,11 +42,10 @@ include('./Components/Database.php');?>
     $row = $res->fetch_assoc();
     $DBuser = $row['user'] ?? null;
     $DBpass = $row['pass'] ?? null;
-
     if ($user == $DBuser && $pass == $DBpass) {
       $_SESSION['user'] = $row['user'];
       $_SESSION['pass'] = $row['pass'];
-      header("Location:./Components/Navigation-bar.php");
+      header("Location: Components/Navigation-bar.php");
     } else if (!$user == $DBuser && !$pass == $DBpass) {
       echo "Wrong User/Password. Please Try Again" . '<br><br>';
       session_destroy();
