@@ -27,7 +27,7 @@ class UUID {
   }
 }
 ```
-## usage
+### usage
 ```php
 <?php 
   include('uuid');
@@ -36,4 +36,9 @@ class UUID {
 ?>
 ```
 
-### tailwindcss CDN
+## tailwindCSS CDN usage
+```php
+<?php
+  include('tailwind.php');
+?>
+```
