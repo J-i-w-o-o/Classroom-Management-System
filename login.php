@@ -9,7 +9,7 @@ include('./Components/Database.php'); ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./main-css/login.css">
-  <title>Document</title>
+  <title>LOGIN</title>
 </head>
 
 <body>
@@ -17,12 +17,12 @@ include('./Components/Database.php'); ?>
     <h1>Login</h1>
     <form method="post">
       <div class="txt_field">
-        <input type="text" name="user" required>
+        <input type="text" name="schoolID" required>
         <span></span>
-        <label>Username</label>
+        <label>School ID</label>
       </div>
       <div class="txt_field">
-        <input type="password" name="pass" required>
+        <input type="password" name="password" required>
         <span></span>
         <label>Password</label>
       </div>
@@ -35,30 +35,29 @@ include('./Components/Database.php'); ?>
   </div>
   <?php
   if (isset($_POST['submit'])) {
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $school_id = $_POST['schoolID'];
+    $password = $_POST['password'];
 
-    $res = $con->query("SELECT * FROM user WHERE user='$user' AND pass='$pass'");
+    $res = $con->query("SELECT password FROM users WHERE school_id='$school_id'");
     $row = $res->fetch_assoc();
-    $DBuser = $row['user'] ?? null;
-    $DBpass = $row['pass'] ?? null;
-    if ($user == $DBuser && $pass == $DBpass) {
-      $_SESSION['user'] = $row['user'];
-      $_SESSION['pass'] = $row['pass'];
-      header("Location: Components/Navigation-bar.php");
-    } else if (!$user == $DBuser && !$pass == $DBpass) {
-      echo "Wrong User/Password. Please Try Again" . '<br><br>';
-      session_destroy();
-    }
-  }
-  $result = $con->query("SELECT * FROM user");
-  echo "list: <br>";
-  foreach ($result as $key) {
-    echo $key['id'] . $key['user'] . $key['pass'] . $key['role'] . '<br>';
-  }
+    $DBhashedPassword = $row['password'];
 
-  while ($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"] . " - Name: " . $row["user"] . " " . $row["pass"] . "<br>";
+    if(password_verify($password, $DBhashedPassword)){
+      // login success!
+      $res = $con->query("SELECT * FROM users WHERE school_id='$school_id'");
+      $row = $res->fetch_assoc();
+      $_SESSION['user'] = 1;
+      $_SESSION['school_id'] = $row['school_id'];
+      $_SESSION['first_name'] = $row['first_name'];
+      $_SESSION['last_name'] = $row['last_name'];
+      $_SESSION['age'] = $row['age'];
+      $_SESSION['address'] = $row['address'];
+      $_SESSION['role'] = $row['role'];
+
+      header("Location: Navigation-bar.php");
+    } else {
+      echo 'school id and password doesn\'t match';
+    }
   }
   ?>
 </body>
