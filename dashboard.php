@@ -16,15 +16,3 @@
 </body>
 </html>
 
-<?php
-  session_start();
-  if(isset($_SESSION['user'])){
-    echo "dashboard.php"."</br>";
-    echo $_SESSION['user'];
-  }
-  else {
-    echo "login first";
-    header("location: /db/");
-  }
-
-?>
