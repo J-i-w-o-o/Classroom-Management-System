@@ -1,4 +1,6 @@
 <?php
-  include('../utils/uuid.php');
-  echo UUID::v4();
+  include('./utils/uuid.php');
+  $uuid = UUID::v4();
+
+  echo $uuid;
 ?>

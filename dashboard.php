@@ -1,8 +1,7 @@
 <?php
 if (isset($_SESSION['user'])) {
 } else {
-    echo "login first";
-    header("location:login.php");
+    header("location: login.php");
 }
 ?>
 <div class="card">
