@@ -22,7 +22,7 @@
         <div class="pass">Forgot Password?</div>
         <input type="submit" value="Login">
         <div class="signup_link">
-          Not a member? <a href="#">Signup</a>
+        Don't have an account?<a href="#">Signup</a>
         </div>
       </form>
     </div>
