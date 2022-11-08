@@ -29,8 +29,4 @@ class UUID {
                       '[0-9a-f]{4}\-?[0-9a-f]{12}\}?$/i', $uuid) === 1;
   }
 }
-
-$myID = UUID::v4();
-echo $myID;
-
 ?>
