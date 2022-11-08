@@ -1,5 +1,6 @@
 <?php
 if (isset($_SESSION['user'])) {
+    echo $_SESSION['user'];
 } else {
     echo "login first";
     header("location:login.php");
