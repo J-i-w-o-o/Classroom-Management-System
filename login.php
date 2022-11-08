@@ -1,9 +1,9 @@
-<DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Animated Login Form</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php 
+    require('');
+    ?>
   </head>
   <body>
     <div class="center">
@@ -22,7 +22,7 @@
         <div class="pass">Forgot Password?</div>
         <input type="submit" value="Login">
         <div class="signup_link">
-        Don't have an account?<a href="#">Signup</a>
+        Don't have an account?<a href="#">Send an Email</a>
         </div>
       </form>
     </div>
