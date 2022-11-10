@@ -1,4 +1,4 @@
-<?php require('Components/usermanager.php'); ?>
+<?php require('../Components/usermanager.php'); ?>
   <form method="post">
     <input type="text" name="schoolID" id="" placeholder="school id">
     <input type="text" name="firstName" id="" placeholder="first">

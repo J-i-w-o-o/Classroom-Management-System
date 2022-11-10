@@ -17,7 +17,7 @@ $role       =   $_SESSION['role'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./main-css/main.css">
+    <link rel="stylesheet" href="../main-css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 </head>
@@ -35,7 +35,7 @@ $role       =   $_SESSION['role'];
                 <ul>
                     <li><a href="#"><i class="fas fa-search"></i></a></li>
                     <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                    <li><a href="./Components/logout.php"><i class="fas fa-power-off"></i></a></li>
+                    <li><a href="../Components/logout.php"><i class="fas fa-power-off"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +91,7 @@ $role       =   $_SESSION['role'];
         <!--main container start-->
         <div class="main-container">
             <?php
-            require('/admin/usermanage.php');
+            require('usermanage.php');
             ?>
         </div>
         <!--main container end-->
