@@ -19,7 +19,7 @@
       $_SESSION['address'] = $row['address'];
       $_SESSION['role'] = $row['role'];
 
-      header("Location: Navigation-bar.php");
+      header("Location: index.php");
     } else {
       header("Location: ./login.php?error= Invalid Username or Password");
     }

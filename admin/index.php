@@ -48,7 +48,7 @@ $role       =   $_SESSION['role'];
                     <p><?php echo $first_name; ?></p>
                 </center>
                 <li class="item">
-                    <a href="#" class="menu-btn">
+                    <a href="dashboard.php" class="menu-btn">
                         <i class="fas fa-desktop"></i><span>Dashboard</span>
                     </a>
                 </li>
@@ -62,8 +62,8 @@ $role       =   $_SESSION['role'];
                     </div>
                 </li>
                 <li class="item" id="messages">
-                    <a href="#messages" class="menu-btn">
-                        <i class="fas fa-envelope"></i><span>Messages <i class="fas fa-chevron-down drop-down"></i></span>
+                    <a href="usermanage.php" class="menu-btn">
+                        <i class="fas fa-envelope"></i><span>usermanage <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
                         <a href="#"><i class="fas fa-envelope"></i><span>New</span></a>
@@ -91,7 +91,7 @@ $role       =   $_SESSION['role'];
         <!--main container start-->
         <div class="main-container">
             <?php
-            require('./dashboard.php')
+            require('/admin/usermanage.php');
             ?>
         </div>
         <!--main container end-->
