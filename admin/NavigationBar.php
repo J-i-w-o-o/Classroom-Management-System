@@ -35,13 +35,13 @@
                     </a>
                     <div class="sub-menu">
                         <a href="usermanage.php"><i class="fas fa-image"></i><span>Add User</span></a>
-                        <a href="#"><i class="fas fa-address-card"></i><span>Delete User</span></a>
+                        <a href="#"><i class="fas fa-address-card"></i><span>Update/Delete User</span></a>
                         <a href="#"><i class="fas fa-address-card"></i><span>Archive User</span></a>
                     </div>
                 </li>
                 <li class="item" id="messages">
                     <a href="#messages" class="menu-btn">
-                        <i class="fas fa-envelope"></i><span>usermanage <i class="fas fa-chevron-down drop-down"></i></span>
+                        <i class="fas fa-envelope"></i><span>Manage Class <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
                         <a href="#"><i class="fas fa-envelope"></i><span>New</span></a>
@@ -51,7 +51,7 @@
                 </li>
                 <li class="item" id="settings">
                     <a href="#settings" class="menu-btn">
-                        <i class="fas fa-cog"></i><span>Settings <i class="fas fa-chevron-down drop-down"></i></span>
+                        <i class="fas fa-cog"></i><span>Manage files <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
                         <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
