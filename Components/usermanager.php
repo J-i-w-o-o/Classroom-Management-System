@@ -1,6 +1,6 @@
 
 <?php
-  require('Database.php');
+
   if(isset($_POST['submit'])){
     $school_id = $_POST['schoolID'];
     $first_name = $_POST['firstName'];
@@ -18,10 +18,22 @@
 
     $sql = "INSERT INTO `users`(`school_id`, `first_name`, `last_name`, `password`, `age`, `address`, `role`) 
     VALUES ('$school_id', '$first_name', '$last_name', '$hashedpassword', '$age', '$address', '$role')";
+    $con->query($sql);
 
+    $sql = "SELECT * FROM users WHERE school_id='$school_id' AND first_name='$first_name'";
     $res = $con->query($sql);
+    header("Refresh:0");
+    if(mysqli_num_rows($res)>0){
+      while($row = mysqli_fetch_assoc($res)){
+        $school_id = $row['school_id'];
+        $sql = "INSERT INTO `profileimg`(`school_id`, `status`) VALUES ('$school_id','1')";
+        $con->query($sql);
+      }
+      
+    }else{
+      echo "You have an error!";
+    }
     
-
   }
 
   

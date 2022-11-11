@@ -20,8 +20,21 @@
         <!--sidebar start-->
         <div class="sidebar">
             <div class="sidebar-menu">
-                <center class="profile">
-                    <img src="1.jpg" alt="">
+                <center class=profile>
+
+                    <?php
+                    $sqlImg = "SELECT * FROM profileimg WHERE school_id='$school_id'";
+                    $resultImg = $con->query($sqlImg);
+                    while ($rowImg = mysqli_fetch_assoc($resultImg)) {
+
+                        if ($rowImg['status'] == 0) {
+                            echo   "<img src='uploads/profile".$school_id.".jpg'>";
+                        } else {
+                            echo "<img src='../uploads/profiledefault.jpg'>";
+                        }
+                    }
+                    ?>
+                    <p class="text-primary"><?php echo $school_id; ?></p>
                     <p><?php echo $first_name; ?></p>
                 </center>
                 <li class="item">
@@ -65,9 +78,8 @@
                 </li>
             </div>
         </div>
+
         <!--sidebar end-->
         <!--main container start-->
-    
+
         <!--main container end-->
-
-
