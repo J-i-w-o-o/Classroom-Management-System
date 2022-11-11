@@ -28,7 +28,7 @@
                     while ($rowImg = mysqli_fetch_assoc($resultImg)) {
 
                         if ($rowImg['status'] == 0) {
-                            echo   "<img src='uploads/profile".$school_id.".jpg'>";
+                            echo "<img src='../uploads/profile".$school_id.".jpg'>";
                         } else {
                             echo "<img src='../uploads/profiledefault.jpg'>";
                         }

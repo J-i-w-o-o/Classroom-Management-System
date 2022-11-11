@@ -4,7 +4,7 @@ if (isset($_SESSION['user'])) {
 } else {
     header("location: login.php");
 }
-require('NavigationBar.php');
+
 ?>
 <div class="main-container">
     <div class="card">

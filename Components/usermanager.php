@@ -1,6 +1,6 @@
 
 <?php
-
+require_once('Database.php');
   if(isset($_POST['submit'])){
     $school_id = $_POST['schoolID'];
     $first_name = $_POST['firstName'];

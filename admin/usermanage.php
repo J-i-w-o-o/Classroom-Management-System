@@ -1,13 +1,12 @@
 <?php
 require('../Components/usermanager.php');
-require('../Components/upload.php');
+//require('../Components/upload.php');
 
 require('HeadFooter/Header.php');
 if (isset($_SESSION['user'])) {
 } else {
   header("location: login.php");
 }
-require('NavigationBar.php');
 ?>
 
 <div class="main-container">
@@ -26,7 +25,9 @@ require('NavigationBar.php');
       </select>
       <input type="submit" name="submit" value="ADD USER">
     </form>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+
+    <!-- NOTE FOR PATWIK : ETO AY PARA SA PAG PALIT NG PROFILE PIC, HINDI PAG ASSIGN NG PROFILE PIC GAMIT ADMIN -->
+    <form method="post" enctype="multipart/form-data">
       <input type="file" name="file">
       <button type="submit" name="upload">Upload</button>
     </form>
