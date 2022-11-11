@@ -1,4 +1,14 @@
-<?php require('../Components/usermanager.php'); ?>
+<?php
+require('../Components/usermanager.php');
+require('HeadFooter/Header.php');
+if (isset($_SESSION['user'])) {
+} else {
+    header("location: login.php");
+}
+require('NavigationBar.php');
+?>
+
+          <div class="main-container">
   <form method="post">
     <input type="text" name="schoolID" id="" placeholder="school id">
     <input type="text" name="firstName" id="" placeholder="first">
@@ -13,4 +23,7 @@
     </select>
     <input type="submit" name="submit" value="ADD USER">
   </form>
-
+  </div>
+  <?php
+require('uwu/Footer.php');
+?>

@@ -1,26 +1,3 @@
-<?php
-session_start();
-$user       =   $_SESSION['user'];
-$school_id  =   $_SESSION['school_id'];
-$first_name =   $_SESSION['first_name'];
-$last_name  =   $_SESSION['last_name'];
-$age        =   $_SESSION['age'];
-$address    =   $_SESSION['address'];
-$role       =   $_SESSION['role'];
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../main-css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-</head>
 
 <body>
     <!--wrapper start-->
@@ -28,7 +5,7 @@ $role       =   $_SESSION['role'];
         <!--header menu start-->
         <div class="header">
             <div class="header-menu">
-                <div class="title">Coding <span>Snow</span></div>
+                <div class="title"><span id="orange" class="text-orange">UCC</span> Classroom</div>
                 <div class="sidebar-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -57,12 +34,12 @@ $role       =   $_SESSION['role'];
                         <i class="fas fa-user-circle"></i><span>Profile <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="#"><i class="fas fa-image"></i><span>Picture</span></a>
+                        <a href="usermanage.php"><i class="fas fa-image"></i><span>Picture</span></a>
                         <a href="#"><i class="fas fa-address-card"></i><span>Info</span></a>
                     </div>
                 </li>
                 <li class="item" id="messages">
-                    <a href="usermanage.php" class="menu-btn">
+                    <a href="#messages" class="menu-btn">
                         <i class="fas fa-envelope"></i><span>usermanage <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
@@ -89,23 +66,7 @@ $role       =   $_SESSION['role'];
         </div>
         <!--sidebar end-->
         <!--main container start-->
-        <div class="main-container">
-            <?php
-            require('usermanage.php');
-            ?>
-        </div>
+    
         <!--main container end-->
-    </div>
-    <!--wrapper end-->
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".sidebar-btn").click(function() {
-                $(".wrapper").toggleClass("collapse");
-            });
-        });
-    </script>
 
-</body>
-
-</html>
