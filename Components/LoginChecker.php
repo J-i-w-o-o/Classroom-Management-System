@@ -19,9 +19,20 @@
       $_SESSION['address'] = $row['address'];
       $_SESSION['role'] = $row['role'];
 
-      header("Location: admin/index.php");
-    } else {
-      header("Location: ./login.php?error= Invalid Username or Password");
-    }
+      if($row['role']=='admin'){
+        header("Location: ./admin/dashboard.php");
+      }
+      else if($row['role']=='student'){
+        header("Location: ./user/dashboard.php");
+      }
+      else if($row['role']=='student'){
+        header("Location: ./instructor/dashboard.php");
+      }
+      else {
+        header("Location: ./login.php?error= Incorrect Username or Password");
+      }
+      
+    } 
+
   }
   ?>
