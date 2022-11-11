@@ -8,7 +8,15 @@
 }
 
 body{
-  background: #fff;
+  background: #2F323A;
+}
+.bg-image{
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper .header{
@@ -49,7 +57,7 @@ body{
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 1s;
   transition-property: color;
 }
 
@@ -72,7 +80,7 @@ body{
   line-height: 35px;
   text-align: center;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 1s;
   transition-property: background, color;
 }
 
@@ -87,10 +95,10 @@ body{
   position: fixed;
   top: 70px;
   width: 250px;
-  height: calc(100% - 9%);
-  transition: 0.3s;
+  height: calc(100%);
+  transition: 1s;
   transition-property: width;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .wrapper .sidebar .sidebar-menu{
@@ -120,7 +128,7 @@ body{
   color: #fbf3ff;
   position: relative;
   padding: 25px 20px;
-  transition: 0.3s;
+  transition: 0.5s;
   transition-property: color;
 }
 
@@ -149,7 +157,7 @@ body{
 .wrapper .sidebar .sidebar-menu .item .sub-menu a{
   display: block;
   position: relative;
-  color: #fff;
+  color: #fbf3ff;
   background-color: #2F323A;
   white-space: nowrap;
   font-size: 15px;
@@ -179,11 +187,10 @@ body{
   width: (100% - 250px);
   margin-top: 70px;
   margin-left: 250px;
-  padding: 15px;
-  background: url(background.jpg)no-repeat;
+  background: url(https://mdbootstrap.com/img/Photos/Others/images/76.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .wrapper.collapse .sidebar{
@@ -208,10 +215,11 @@ body{
 .wrapper.collapse .main-container{
   width: calc(100% - 70px);
   margin-left: 70px;
+  padding: 0;
 }
 
 .wrapper .main-container .card{
-  background: #fff;
+  background: #fbf3ff;
   padding: 15px;
   margin-bottom: 10px;
   font-size: 14px;

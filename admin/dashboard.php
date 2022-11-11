@@ -18,5 +18,5 @@ require('NavigationBar.php');
     </div>
 </div>
 <?php
-require('uwu/Footer.php');
+require('HeadFooter/Footer.php');
 ?>
