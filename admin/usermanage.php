@@ -12,7 +12,7 @@ if (isset($_SESSION['user'])) {
   <div class="modal-container">
     <form method="post">
       <input type="text" name="schoolID" placeholder="school id">
-      <input type="text" name="firstName"  placeholder="first">
+      <input type="text" name="firstName" placeholder="first">
       <input type="text" name="lastName" placeholder="lastname">
       <input type="password" name="password" placeholder="password">
       <input type="text" name="age" placeholder="age">
@@ -24,7 +24,6 @@ if (isset($_SESSION['user'])) {
       </select>
       <input type="submit" name="submit" value="ADD USER">
     </form>
-
   </div>
 </div>
 <?php
