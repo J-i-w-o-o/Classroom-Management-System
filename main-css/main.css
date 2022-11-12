@@ -113,6 +113,7 @@ body {
   transition: 1s;
   transition-property: width;
   overflow-y: hidden;
+  
 }
 
 /*  */
@@ -135,6 +136,14 @@ body {
   color: #fbf3ff;
   font-weight: 900;
   margin-bottom: 10px;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item{
+  width: 250px;
+  overflow: hidden;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
   display: block;
 }
 .x--wrapper .x--sidebar a span {
