@@ -40,10 +40,9 @@ body{
 
 .x--wrapper .x--header .x--header-menu .x--title{
   color: #fbf3ff ;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: uppercase;
   font-weight: 900;
-  text-align: center;
 }
 
 .x--wrapper .x--header .x--header-menu .x--title span{
@@ -51,16 +50,16 @@ body{
 }
 
 .x--wrapper .x--header .x--header-menu .x--sidebar-btn{
-  color: #fbf3ff;
-  padding-left: 0px;
+  color: #fbf3ff ;
+  padding-left: 20px;
   position: absolute;
-  margin-left: 205px;
+  margin-left: 240px;
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;
   transition: 1s;
   transition-property: color;
-  }
+}
 
 .x--wrapper .x--header .x--header-menu .x--sidebar-btn:hover{
   color: #ff7100;
@@ -68,14 +67,13 @@ body{
 
 .x--wrapper .x--header .x--header-menu ul{
   display: flex;
-  padding-top: 15px;
 }
 
 .x--wrapper .x--header .x--header-menu ul li a{
   background: #fbf3ff;
   color: #000;
   display: block;
-  margin: 0 20px;
+  margin: 0 10px;
   font-size: 18px;
   width: 34px;
   height: 34px;
@@ -155,7 +153,6 @@ body{
   max-height: 0;
   transition: 0.3s;
   transition-property: background, max-height;
-  
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a{
@@ -175,14 +172,12 @@ body{
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:not(last-child){
-  border-bottom: 1px solid #ff7100;
-  text-decoration: none;
+  border-bottom: 1px solid #ff7100  ;
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
   padding-right: 20px;
   font-size: 10px;
-  
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item:target .x--sub-menu{
@@ -199,28 +194,27 @@ body{
   transition: 1s;
 }
 
-.x--wrapper.x--collapse .x--sidebar{
+.x--wrapper.collapse .x--sidebar{
   width: 70px;
 }
 
-.x--wrapper.x--collapse .x--sidebar .x--profile img,
-.x--wrapper.x--collapse .x--sidebar .x--profile p,
-.x--wrapper.x--collapse .x--sidebar a span{
+.x--wrapper.collapse .x--sidebar .x--profile img,
+.x--wrapper.collapse .x--sidebar .x--profile p,
+.x--wrapper.collapse .x--sidebar a span{
   display: none;
 }
 
-.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
+.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
   font-size: 23px;
   
 }
 
-.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
+.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
   font-size: 18px;
   padding-left: 3px;
-  
 }
 
-.x--wrapper.x--collapse .x--main-container{
+.x--wrapper.collapse .x--main-container{
   width: calc(100% - 70px);
   margin-left: 70px;
   padding: 0;

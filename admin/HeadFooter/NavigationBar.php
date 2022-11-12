@@ -10,8 +10,10 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#"><i class="fas fa-user"></i></a></li>
-                </ul> 
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i></a></li>
+                    <li><a href="../Components/logout.php"><i class="fas fa-power-off"></i></a></li>
+                </ul>
             </div>
         </div>
         <!--header menu end-->
@@ -24,11 +26,12 @@
                     $sqlImg = "SELECT * FROM profileimg WHERE school_id='$school_id'";
                     $resultImg = $con->query($sqlImg);
                     while ($rowImg = mysqli_fetch_assoc($resultImg)) {
+                        $filename = "../uploads/profile".$school_id."*";
+                        $fileinfo = glob($filename);
+                        $fileext = explode(".", $fileinfo[0]);
+                        $fileactualext = $fileext[3];
+
                         if ($rowImg['status'] == 0) {
-                            $filename = "../uploads/profile".$school_id."*";
-                            $fileinfo = glob($filename);
-                            $fileext = explode(".", $fileinfo[0]);
-                            $fileactualext = $fileext[3];
                             echo "<img src='../uploads/profile".$school_id.".$fileactualext?". mt_rand() ."'>";
                         } else {
                             echo "<img src='../uploads/profiledefault.jpg'>";
@@ -75,11 +78,6 @@
                 <li class="x--item">
                     <a href="#" class="x--menu-btn">
                         <i class="fas fa-info-circle"></i><span>About</span>
-                    </a>
-                </li>
-                <li class="x--item">
-                    <a href="../Components/logout.php" class="x--menu-btn">
-                   <i class="fas fa-power-off"></i><span>Logout</span>
                     </a>
                 </li>
             </div>
