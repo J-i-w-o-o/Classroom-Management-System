@@ -10,7 +10,7 @@
 body{
   background: #2F323A;
 }
-.bg-image{
+.x--bg-image{
   height: 100%;
 
   /* Center and scale the image nicely */
@@ -19,7 +19,7 @@ body{
   background-size: cover;
 }
 
-.wrapper .header{
+.x--wrapper .x--header{
   z-index: 1;
   background: #22242A;
   position: fixed;
@@ -29,7 +29,7 @@ body{
   top: 0;
 }
 
-.wrapper .header .header-menu{
+.x--wrapper .x--header .x--header-menu{
   width: calc(100% - 0%);
   height: 100%;
   display: flex;
@@ -38,18 +38,18 @@ body{
   padding: 0 20px;
 }
 
-.wrapper .header .header-menu .title{
+.x--wrapper .x--header .x--header-menu .title{
   color: #fbf3ff ;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.wrapper .header .header-menu .title span{
+.x--wrapper .x--header .x--header-menu .x--title span{
   color: #ff7100;
 }
 
-.wrapper .header .header-menu .sidebar-btn{
+.x--wrapper .x--header .x--header-menu .x--sidebar-btn{
   color: #fbf3ff ;
   padding-left: 20px;
   position: absolute;
@@ -61,15 +61,15 @@ body{
   transition-property: color;
 }
 
-.wrapper .header .header-menu .sidebar-btn:hover{
+.x--wrapper .x--header .x--header-menu .x--sidebar-btn:hover{
   color: #ff7100;
 }
 
-.wrapper .header .header-menu ul{
+.x--wrapper .x--header .x--header-menu ul{
   display: flex;
 }
 
-.wrapper .header .header-menu ul li a{
+.x--wrapper .x--header .x--header-menu ul li a{
   background: #fbf3ff;
   color: #000;
   display: block;
@@ -84,12 +84,12 @@ body{
   transition-property: background, color;
 }
 
-.wrapper .header .header-menu ul li a:hover{
+.x--wrapper .x--header .x--header-menu ul li a:hover{
   background: #ff7100;
   color: #fbf3ff;
 }
 
-.wrapper .sidebar{
+.x--wrapper .x--sidebar{
   z-index: 1;
   background: #2F323A;
   position: fixed;
@@ -101,29 +101,29 @@ body{
   overflow-y: hidden;
 }
 
-.wrapper .sidebar .sidebar-menu{
+.x--wrapper .x--sidebar .x--sidebar-menu{
   overflow: hidden;
 }
 
-.wrapper .sidebar .sidebar-menu .profile img{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--profile img{
   margin: 20px 0;
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.wrapper .sidebar .sidebar-menu .profile p{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--profile p{
   color: #fbf3ff;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.wrapper .sidebar .sidebar-menu .item{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item{
   width: 250px;
   overflow: hidden;
 }
 
-.wrapper .sidebar .sidebar-menu .item .menu-btn{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
   display: block;
   color: #fbf3ff;
   position: relative;
@@ -132,21 +132,21 @@ body{
   transition-property: color;
 }
 
-.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn:hover{
   color: #ff7100;
 }
 
-.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn i{
   margin-right: 20px;
 }
 
-.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn .x--drop-down{
   float: right;
   font-size: 12px;
   margin-top: 3px;
 }
 
-.wrapper .sidebar .sidebar-menu .item .sub-menu{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu{
   background: #3498DB;
   overflow: hidden;
   max-height: 0;
@@ -154,7 +154,7 @@ body{
   transition-property: background, max-height;
 }
 
-.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a{
   display: block;
   position: relative;
   color: #fbf3ff;
@@ -166,24 +166,24 @@ body{
   transition-property: background;
 }
 
-.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:hover{
   background: #ff7100;
 }
 
-.wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:not(last-child){
   border-bottom: 1px solid #ff7100  ;
 }
 
-.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
   padding-right: 20px;
   font-size: 10px;
 }
 
-.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item:target .x--sub-menu{
   max-height: 500px;
 }
 
-.wrapper .main-container{
+.x--wrapper .x--main-container{
   width: (100% - 250px);
   margin-top: 70px;
   margin-left: 250px;
@@ -193,32 +193,32 @@ body{
   transition: 1s;
 }
 
-.wrapper.collapse .sidebar{
+.x--wrapper.collapse .x--sidebar{
   width: 70px;
 }
 
-.wrapper.collapse .sidebar .profile img,
-.wrapper.collapse .sidebar .profile p,
-.wrapper.collapse .sidebar a span{
+.x--wrapper.collapse .x--sidebar .x--profile img,
+.x--wrapper.collapse .x--sidebar .x--profile p,
+.x--wrapper.collapse .x--sidebar a span{
   display: none;
 }
 
-.wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
   font-size: 23px;
 }
 
-.wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
   font-size: 18px;
   padding-left: 3px;
 }
 
-.wrapper.collapse .main-container{
+.x--wrapper.collapse .x--main-container{
   width: calc(100% - 70px);
   margin-left: 70px;
   padding: 0;
 }
 
-.wrapper .main-container .card{
+.x--wrapper .x--main-container .x--card{
   background: #fbf3ff;
   padding: 15px;
   margin-bottom: 10px;
