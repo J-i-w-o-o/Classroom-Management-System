@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
 }
 ?>
 
-<div class="main-container">
+<div class="x--main-container">
   <div class="modal-container">
     <form method="post">
       <input type="text" name="schoolID" placeholder="school id">
@@ -30,9 +30,6 @@ if (isset($_SESSION['user'])) {
       <input type="file" name="file">
       <button type="submit" name="upload">Upload</button>
     </form>
-
-    
-
   </div>
 </div>
 <?php
