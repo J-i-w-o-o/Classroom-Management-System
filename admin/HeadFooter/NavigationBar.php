@@ -26,9 +26,13 @@
                     $sqlImg = "SELECT * FROM profileimg WHERE school_id='$school_id'";
                     $resultImg = $con->query($sqlImg);
                     while ($rowImg = mysqli_fetch_assoc($resultImg)) {
+                        $filename = "../uploads/profile".$school_id."*";
+                        $fileinfo = glob($filename);
+                        $fileext = explode(".", $fileinfo[0]);
+                        $fileactualext = $fileext[3];
 
                         if ($rowImg['status'] == 0) {
-                            echo "<img src='../uploads/profile".$school_id.".jpg'>";
+                            echo "<img src='../uploads/profile".$school_id.".$fileactualext?". mt_rand() ."'>";
                         } else {
                             echo "<img src='../uploads/profiledefault.jpg'>";
                         }
