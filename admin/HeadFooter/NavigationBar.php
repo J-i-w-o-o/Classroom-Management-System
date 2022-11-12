@@ -7,13 +7,8 @@
             <div class="x--header-menu">
                 <div class="x--title"><span id="orange" class="text-orange">UCC</span> Classroom</div>
                 <div class="x--sidebar-btn">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars">
                 </div>
-                <ul>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                    <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                    <li><a href="../Components/logout.php"><i class="fas fa-power-off"></i></a></li>
-                </ul>
             </div>
         </div>
         <!--header menu end-->
@@ -79,6 +74,9 @@
                     <a href="#" class="x--menu-btn">
                         <i class="fas fa-info-circle"></i><span>About</span>
                     </a>
+                </li>
+                <li class="x--item">
+                    <a href="../Components/logout.php" class="x--menu-btn"><i class="fas fa-power-off"></i><span>Logout</span></a>
                 </li>
             </div>
         </div>

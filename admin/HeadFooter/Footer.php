@@ -5,6 +5,7 @@
             $(".x--wrapper").toggleClass("x--collapse");
         });
     });
+    
 </script>
 </body>
 </html>
