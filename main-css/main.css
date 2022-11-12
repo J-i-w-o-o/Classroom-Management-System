@@ -193,26 +193,26 @@ body{
   transition: 1s;
 }
 
-.x--wrapper.collapse .x--sidebar{
+.x--wrapper.x--collapse .x--sidebar{
   width: 70px;
 }
 
-.x--wrapper.collapse .x--sidebar .x--profile img,
-.x--wrapper.collapse .x--sidebar .x--profile p,
-.x--wrapper.collapse .x--sidebar a span{
+.x--wrapper.x--collapse .x--sidebar .x--profile img,
+.x--wrapper.x--collapse .x--sidebar .x--profile p,
+.x--wrapper.x--collapse .x--sidebar a span{
   display: none;
 }
 
-.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
+.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
   font-size: 23px;
 }
 
-.x--wrapper.collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
+.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
   font-size: 18px;
   padding-left: 3px;
 }
 
-.x--wrapper.collapse .x--main-container{
+.x--wrapper.x--collapse .x--main-container{
   width: calc(100% - 70px);
   margin-left: 70px;
   padding: 0;
