@@ -38,7 +38,7 @@ body{
   padding: 0 20px;
 }
 
-.x--wrapper .x--header .x--header-menu .title{
+.x--wrapper .x--header .x--header-menu .x--title{
   color: #fbf3ff ;
   font-size: 25px;
   text-transform: uppercase;
