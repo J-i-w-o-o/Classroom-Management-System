@@ -52,7 +52,7 @@
                     </a>
                     <div class="x--sub-menu">
                         <a href="usermanage.php"><i class="fas fa-image"></i><span>Add User</span></a>
-                        <a href="#"><i class="fas fa-address-card"></i><span>Update/Delete User</span></a>
+                        <a href="update_delete.php"><i class="fas fa-address-card"></i><span>Update/Delete User</span></a>
                         <a href="#"><i class="fas fa-address-card"></i><span>Archive User</span></a>
                     </div>
                 </li>

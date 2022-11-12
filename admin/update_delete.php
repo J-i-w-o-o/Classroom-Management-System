@@ -10,8 +10,8 @@ if (isset($_SESSION['user'])) {
 
 <div class="x--main-container">
    
-      <h1>AWDASDawd</h1>
-    </div>
+  <h1>AWDASDawd</h1>
+</div>
 
 <?php
 require('HeadFooter/Footer.php');
