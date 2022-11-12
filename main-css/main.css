@@ -136,6 +136,7 @@ body {
   color: #fbf3ff;
   font-weight: 900;
   margin-bottom: 10px;
+  display: block;
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item{
@@ -265,7 +266,7 @@ body {
   width: calc(100% - 70px);
   margin-left: 70px;
   margin-top: 70px;
-  background: url(../uploads/BG.JPG) no-repeat;
+  background: url(../uploads/ucc-bg.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   transition: 1s;

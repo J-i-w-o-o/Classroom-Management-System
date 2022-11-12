@@ -39,8 +39,8 @@
                             }
                         }
                         ?>
-                        <p class="text-info bg-warning bg-gradient"><?php echo $school_id; ?></p>
-                        <p><?php echo $first_name . " " . $last_name; ?></p>
+                        <p class="text-primary bg-warning"><?php echo $school_id; ?></p>
+                        <p><?php echo $first_name." ".$last_name; ?></p>
                     </center>
 
                     <li class="x--item">
