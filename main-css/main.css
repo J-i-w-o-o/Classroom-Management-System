@@ -1,41 +1,235 @@
-.html {
-    background-color: black;
-}
-#sidebar-wrapper{
-    z-index: 1;
-    position: absolute;
-    width: 0;
-    height: 100%;
-    overflow-y: hidden;
-    background: black;
-    opacity: 0.9;
-}
-#page-content-wrapper{  /*still needs some fixing side wrapper dont go down all the way*/
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-#wrapper.toggled #sidebar-wrapper{
-    width: 250px; 
+body{
+  background: #2F323A;
 }
-#wrapper.toggled #page-content-wrapper{ /*Important : jqeury toggled sidebar and page content used for responsiveness when clicking button*/
-    padding-left: 250px; 
+.x--bg-image{
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.sidebar-nav{
-    padding: 0;
-    list-style: none;
+
+.x--wrapper .x--header{
+  z-index: 1;
+  background: #22242A;
+  position: fixed;
+  width: calc(100% - 0%);
+  height: 70px;
+  display: flex;
+  top: 0;
 }
-.sidebar-nav li{
-    text-indent: 20px;
-    line-height: 40px;
+
+.x--wrapper .x--header .x--header-menu{
+  width: calc(100% - 0%);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
-.sidebar-nav li a{
-    display: block;
-    text-decoration: none;
-    color: #ddd;
+
+.x--wrapper .x--header .x--header-menu .x--title{
+  color: #fbf3ff ;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
 }
-.sidebar-nav li a:hover{
-    background: #16A085;
+
+.x--wrapper .x--header .x--header-menu .x--title span{
+  color: #ff7100;
 }
+
+.x--wrapper .x--header .x--header-menu .x--sidebar-btn{
+  color: #fbf3ff;
+  padding-left: 0px;
+  position: absolute;
+  margin-left: 205px;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 1s;
+  transition-property: color;
+  }
+
+.x--wrapper .x--header .x--header-menu .x--sidebar-btn:hover{
+  color: #ff7100;
+}
+
+.x--wrapper .x--header .x--header-menu ul{
+  display: flex;
+  padding-top: 15px;
+}
+
+.x--wrapper .x--header .x--header-menu ul li a{
+  background: #fbf3ff;
+  color: #000;
+  display: block;
+  margin: 0 20px;
+  font-size: 18px;
+  width: 34px;
+  height: 34px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 1s;
+  transition-property: background, color;
+}
+
+.x--wrapper .x--header .x--header-menu ul li a:hover{
+  background: #ff7100;
+  color: #fbf3ff;
+}
+
+.x--wrapper .x--sidebar{
+  z-index: 1;
+  background: #2F323A;
+  position: fixed;
+  top: 70px;
+  width: 250px;
+  height: calc(100%);
+  transition: 1s;
+  transition-property: width;
+  overflow-y: hidden;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu{
+  overflow: hidden;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--profile img{
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--profile p{
+  color: #fbf3ff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item{
+  width: 250px;
+  overflow: hidden;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
+  display: block;
+  color: #fbf3ff;
+  position: relative;
+  padding: 25px 20px;
+  transition: 0.5s;
+  transition-property: color;
+  text-decoration: none;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn:hover{
+  color: #ff7100;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn i{
+  margin-right: 20px;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn .x--drop-down{
+  float: right;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu{
+  background: #3498DB;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+  transition-property: background, max-height;
+  
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a{
+  display: block;
+  position: relative;
+  color: #fbf3ff;
+  background-color: #2F323A;
+  white-space: nowrap;
+  font-size: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:hover{
+  background: #ff7100;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:not(last-child){
+  border-bottom: 1px solid #ff7100;
+  text-decoration: none;
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
+  padding-right: 20px;
+  font-size: 10px;
+  
+}
+
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item:target .x--sub-menu{
+  max-height: 500px;
+}
+
+.x--wrapper .x--main-container{
+  width: (100% - 250px);
+  margin-top: 70px;
+  margin-left: 250px;
+  background: url(https://mdbootstrap.com/img/Photos/Others/images/76.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: 1s;
+}
+
+.x--wrapper.x--collapse .x--sidebar{
+  width: 70px;
+}
+
+.x--wrapper.x--collapse .x--sidebar .x--profile img,
+.x--wrapper.x--collapse .x--sidebar .x--profile p,
+.x--wrapper.x--collapse .x--sidebar a span{
+  display: none;
+}
+
+.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
+  font-size: 23px;
+  
+}
+
+.x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu i{
+  font-size: 18px;
+  padding-left: 3px;
+  
+}
+
+.x--wrapper.x--collapse .x--main-container{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+  padding: 0;
+}
+
+.x--wrapper .x--main-container .x--card{
+  background: #fbf3ff;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+      
