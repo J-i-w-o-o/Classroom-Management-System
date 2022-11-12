@@ -1,8 +1,8 @@
 </div>
 <script type="text/javascript">
         $(document).ready(function() {
-            $(".sidebar-btn").click(function() {
-                $(".wrapper").toggleClass("collapse");
+            $(".x--sidebar-btn").click(function() {
+                $(".x--wrapper").toggleClass("collapse");
             });
         });
     </script>
