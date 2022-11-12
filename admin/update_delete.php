@@ -10,7 +10,9 @@ if (isset($_SESSION['user'])) {
 
 <div class="x--main-container">
    
-  <h1>AWDASDawd</h1>
+  <div class="container bg-white">
+    <h1>adwasd</h1>
+  </div>
 </div>
 
 <?php
