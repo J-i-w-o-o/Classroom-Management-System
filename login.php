@@ -3,6 +3,7 @@ session_start();
 require('./Components/Database.php');
 require('./Components/Bootstrap.php');
 require('./Components/LoginChecker.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
