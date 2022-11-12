@@ -90,7 +90,6 @@ body{
   background: #ff7100;
   color: #fbf3ff;
 }
-
 .x--wrapper .x--sidebar{
   z-index: 1;
   background: #2F323A;
@@ -201,7 +200,7 @@ body{
   height: 100vh;
   transition: 1s;
 }
-
+/* DITO START NG PAG COLLAPSE */
 .x--wrapper.x--collapse .x--sidebar{
   width: 70px;
 }
