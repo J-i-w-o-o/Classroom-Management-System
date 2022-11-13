@@ -19,7 +19,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <div class="input-group">
-        <span class="input-group-text">First and last name</span>
+        <span class="input-group-text">First and Last Name</span>
         <input type="text" aria-label="First name" class="form-control">
         <input type="text" aria-label="Last name" class="form-control">
         </div>
@@ -30,7 +30,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"></span>
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
         <input type="text" class="form-control" placeholder="Age" aria-label="Age" aria-describedby="basic-addon1">
         </div>
 
@@ -39,12 +39,13 @@ if (isset($_SESSION['user'])) {
         <input type="text" class="form-control" placeholder="Address" aria-label="SchoolID" aria-describedby="basic-addon1">
         </div>
 
-        <select name="role">
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="admin">Admin</option>
-          </select>
-          <input type="submit" name="submit" value="ADD USER">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Student</option>
+          <option value="2">Teacher</option>
+          <option value="3">Admin</option>
+        </select>
+
+        <input type="submit" class="btn btn-success" name="submit" value="Add User"></input>
 
         <!-- <button type="button" class="btn btn-success">Add Student</button> -->
 
@@ -77,6 +78,8 @@ require('HeadFooter/Footer.php');
   <title>Document</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 </head>
 <body>
