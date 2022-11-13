@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
   <div class="x--main-container">
     <div class="modal-container">
 
-        <form method="post">
+      <form method="post">
 
         <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
@@ -45,26 +45,19 @@ if (isset($_SESSION['user'])) {
           <option value="3">Admin</option>
         </select>
 
-        <input type="submit" class="btn btn-success" name="submit" value="Add User"></input>
+        <br>
+        <br>
+        <br>
 
-        <!-- <button type="button" class="btn btn-success">Add Student</button> -->
+        <div class="d-flex justify-content-xxl-evenly">
+        <input type="submit" class="btn btn-success btn-lg" name="submit" value="Add User"></input>
+        <input type="submit" class="btn btn-danger btn-lg" name="submit" value="Clear"></input>
+        </div>
 
-          <!-- <input type="text" name="schoolID" placeholder="school id">
-          <input type="text" name="firstName"  placeholder="first">
-          <input type="text" name="lastName" placeholder="lastname">
-          <input type="password" name="password" placeholder="password">
-          <input type="text" name="age" placeholder="age">
-          <input type="text" name="address" placeholder="address">
-          <select name="role">
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="admin">Admin</option>
-          </select>
-          <input type="submit" name="submit" value="ADD USER"> -->
-
-        </form>
+      </form>
     </div>
   </div>
+
 <?php
 require('HeadFooter/Footer.php');
 ?>
@@ -80,6 +73,8 @@ require('HeadFooter/Footer.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../main-css/userManage.css">
 
 </head>
 <body>
