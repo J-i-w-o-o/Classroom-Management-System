@@ -201,7 +201,7 @@ body {
   font-size: 18px;
   padding-left: 3px;
 }
-.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu {
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu  {
   font-size: 18px;
   padding-left: 3px;
   background: #3498db;
@@ -209,6 +209,7 @@ body {
   max-height: 0;
   transition-property: background, max-height;
 }
+
 
 .x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a {
   display: block;
@@ -234,7 +235,7 @@ body {
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:hover {
-  background: #ff7100;
+  background: #ff7100;  
 }
 
 .x--wrapper

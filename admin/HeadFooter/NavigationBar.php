@@ -40,7 +40,7 @@
                         }
                         ?>
                         <p class="text-primary bg-warning"><?php echo $school_id; ?></p>
-                        <p><?php echo $first_name." ".$last_name; ?></p>
+                        <p><?php echo $first_name . " " . $last_name; ?></p>
                     </center>
 
                     <li class="x--item">
@@ -50,31 +50,30 @@
                     </li>
                     <li class="x--item" id="profile">
                         <a href="#profile" class="x--menu-btn">
-                            <i class="fas fa-user-circle"></i><span>Manage Users <i class="fas fa-chevron-down drop-down"></i></span>
+                            <i class="fas fa-user-circle"></i><span>Manage Users&nbsp;&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="usermanage.php"><i class="fas fa-image"></i><span>Add User</span></a>
-                            <a href="update_delete.php"><i class="fas fa-address-card"></i><span>Update/Delete User</span></a>
-                            <a href="#"><i class="fas fa-address-card"></i><span>Archive User</span></a>
+                            <a href="usermanage.php"><i class="fa-solid fa-user-plus"></i><span>Add User</span></a>
+                            <a href="update_delete.php"><i class="fa-solid fa-user-gear"></i><span>Update/Delete User</span></a>
+                            <a href="#"><i class="fa-solid fa-box-archive "></i></i><span>Archive User</span></a>
                         </div>
                     </li>
                     <li class="x--item" id="messages">
                         <a href="#messages" class="x--menu-btn">
-                            <i class="fas fa-envelope"></i><span>Manage Class <i class="fas fa-chevron-down drop-down"></i></span>
+                            <i class="fa-solid fa-chalkboard-user"></i><span>Manage Class &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="#"><i class="fas fa-envelope"></i><span>New</span></a>
-                            <a href="#"><i class="fas fa-envelope-square"></i><span>Sent</span></a>
-                            <a href="#"><i class="fas fa-exclamation-circle"></i><span>Spam</span></a>
+                            <a href="#"><i class="fa-solid fa-plus"></i></i><span>Add Class</span></a>
+                            <a href="#"><i class="fa-solid fa-gears"></i><span>Update/Delete Class</span></a>
                         </div>
                     </li>
                     <li class="x--item" id="settings">
                         <a href="#settings" class="x--menu-btn">
-                            <i class="fas fa-cog"></i><span>Manage files <i class="fas fa-chevron-down drop-down"></i></span>
+                            <i class="fa-regular fa-folder-open"></i><span>Manage Files &nbsp;&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="#"><i class="fas fa-language"></i><span>Language</span></a>
+                            <a href="#"><i class="fa-solid fa-eye"></i><span>View files</span></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-bars-progress"></i><span>Modify Files</span></a>
                         </div>
                     </li>
                     <li class="x--item">
