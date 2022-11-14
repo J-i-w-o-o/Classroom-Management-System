@@ -1,8 +1,9 @@
 <?php
-require('HeadFooter/Header.php');
+
 if (isset($_SESSION['user'])) {
+  require('HeadFooter/Header.php');
 } else {
-  header("location: login.php");
+  header("location: ../login.php");
 }
 
 require('../Components/Database.php');
