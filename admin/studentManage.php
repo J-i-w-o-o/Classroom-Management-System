@@ -14,9 +14,7 @@ if (isset($_SESSION['user'])) {
   <div class="x--main-container">
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#studentModal">
-      Add Student
-    </button>
+    
 
     <?php // Add Student Modal Pop-up
       require './Modals/Add/AddStudentModal.php';
@@ -24,7 +22,10 @@ if (isset($_SESSION['user'])) {
       //require './Modals/Delete/DeleteStudentModal.php';
     ?>
 
-    <div class="container p-2 bg-white">
+    <div class="container-lg p-2 bg-white">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#studentModal">
+      Add Student
+    </button>
       <table
         id="table"
         data-show-columns="true"
@@ -38,9 +39,10 @@ if (isset($_SESSION['user'])) {
             <th data-field="student-id" data-sortable="true">STUDENT ID</th>
             <th data-field="name" data-sortable="true">NAME</th>
             <th data-field="section">SECTION</th>
-            <th>ACTION</th>
+            <th class="text-center">ACTION</th>
           </tr>
         </thead>
+        
         <tbody>
           <?php 
             require '../Components/fetchStudents.php'; // fetching all students from the database 

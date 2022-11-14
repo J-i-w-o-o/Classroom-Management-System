@@ -1,3 +1,5 @@
+
+
 <!-- Modal -->
 <div class="modal fade" id="studentModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -22,12 +24,27 @@
         </div>
 
         <!-- SECTION IS DROP DOWN -->
-        <select name="section" id="">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSection">Section</label>
+          </div>
+          <select name="section" id="inputGroupSection" class="custom-select">
           <?php
-            require '../Components/Database.php';
+            
+            $sections = $con->query("SELECT * FROM sections");
+            if($sections->num_rows > 0){
+              while($row = $sections->fetch_assoc()){?>
+                <option value="<?php echo $row['course']."-".$row['section']?>" name="section"><?php echo $row['course']."-".$row['section']?></option>
+              <?php
+              }
+            } else {?>
+              <option value="" name="section">no section records</option>
+            <?php
+            }
           ?>
-          <option value="">BSIT</option>
-        </select>
+          </select>
+        </div>
+        
 
         <div class="d-flex justify-content-evenly py-2 mb-4">
         <input type="submit" class="btn btn-success btn-lg mx-2" name="addingStudentSubmit" value="Add User"></input>
@@ -42,8 +59,15 @@
 </div>
 
 <?php
+  require '../Components/Database.php';
   if(isset($_POST['addingStudentSubmit'])){
-    $_POST[''];
+    $student_id = $_POST['schoolID'];
+    $fname = $_POST['firstName'];
+    $lname = $_POST['lastName'];
+    $section = $_POST['section'];
+
+    $res = $con->query("INSERT INTO `students`(`student_id`, `first_name`, `last_name`, `section`, `status`) 
+    VALUES ('$student_id','$fname','$lname','$section', 1)");
   }
   
 ?>
