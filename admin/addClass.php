@@ -6,23 +6,17 @@ if (isset($_SESSION['user'])) {
 } else {
   header("location: ../login.php");
 }
-
+$targetid = null;
 ?>
 
 
+<div class="x--main-container">
 
-  <div class="x--main-container">
+<div class="container-lg p-2 bg-white">
 
-    <!-- modal imports -->
-    <?php 
-      require './Modals/Add/AddStudentModal.php';// Add Student Modal Pop-up
-      require './Modals/Edit/EditStudentModal.php'; // Edit Student Modal Pop-up
-      require './Modals/Delete/DeleteStudentModal.php';
-    ?>
-
-    <div class="container-lg p-2 bg-white">
+<div class="container-lg p-2 bg-white">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#studentModal">
-      Add Student
+      Add Class
     </button>
       <table
         id="table"
@@ -53,16 +47,15 @@ if (isset($_SESSION['user'])) {
                   <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
                   <td><?php echo $row['section'] ?></td>
                   <td class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal">
+                    <button onclick="handleEdit()" type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal" data-edit->
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
                     </button>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
+                    <button onclick="handleDelete()" type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
                         Delete
                       <i class="fa fa-trash h5" aria-hidden="true"></i>
                     </button>
-                    <?php $_SESSION['target-id'] = $row['student_id']; ?>
                   </td>
                 </tr>
               <?php
@@ -72,14 +65,13 @@ if (isset($_SESSION['user'])) {
         </tbody>
       </table>
     </div>
+</div>
 
-    <!-- <div class="container-lg pt-5 px-1" id="containerForm"> 
-      
-    </div> -->
-  </div>
+
+</div>
+
+
 
 <?php
 require('HeadFooter/Footer.php');
 ?>
-
-

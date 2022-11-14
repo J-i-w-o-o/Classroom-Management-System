@@ -63,7 +63,7 @@
                             <i class="fa-solid fa-chalkboard-user"></i><span>Manage Class &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="#"><i class="fa-solid fa-plus"></i></i><span>Add Class</span></a>
+                            <a href="addClass.php"><i class="fa-solid fa-plus"></i></i><span>Add Class</span></a>
                             <a href="#"><i class="fa-solid fa-gears"></i><span>Update/Delete Class</span></a>
                         </div>
                     </li>
