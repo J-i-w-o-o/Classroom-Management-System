@@ -53,9 +53,9 @@
                             <i class="fas fa-user-circle"></i><span>Manage Users&nbsp;&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="usermanage.php"><i class="fa-solid fa-user-plus"></i><span>Add User</span></a>
-                            <a href="update_delete.php"><i class="fa-solid fa-user-gear"></i><span>Update/Delete User</span></a>
-                            <a href="#"><i class="fa-solid fa-box-archive "></i></i><span>Archive User</span></a>
+                            <a href="studentManage.php"><i class="fa-solid fa-user-gear"></i><span>Student</span></a>
+                            <a href="update_delete.php"><i class="fa-solid fa-user-gear"></i><span>Teacher</span></a>
+                            <a href="#"><i class="fa-solid fa-user-gear"></i><span>Admin</span></a>
                         </div>
                     </li>
                     <li class="x--item" id="messages">
