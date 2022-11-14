@@ -16,10 +16,10 @@ if (isset($_SESSION['user'])) {
     <!-- Button trigger modal -->
     
 
-    <?php // Add Student Modal Pop-up
-      require './Modals/Add/AddStudentModal.php';
-      //require './Modals/Edit/EditStudentModal.php';
-      //require './Modals/Delete/DeleteStudentModal.php';
+    <?php 
+      require './Modals/Add/AddStudentModal.php';// Add Student Modal Pop-up
+      require './Modals/Edit/EditStudentModal.php'; // Edit Student Modal Pop-up
+      require './Modals/Delete/DeleteStudentModal.php';
     ?>
 
     <div class="container-lg p-2 bg-white">
@@ -55,12 +55,12 @@ if (isset($_SESSION['user'])) {
                   <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
                   <td><?php echo $row['section'] ?></td>
                   <td class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#studentModal">
+                    <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
                     </button>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#studentModal">
+                    <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
                         Delete
                       <i class="fa fa-trash h5" aria-hidden="true"></i>
                     </button>
