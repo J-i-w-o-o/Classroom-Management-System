@@ -1,8 +1,8 @@
 <?php
-
-if (isset($_SESSION['user'])) {
   require('../Components/usermanager.php');
   require('HeadFooter/Header.php');
+if (isset($_SESSION['user'])) {
+
 } else {
   header("location: ../login.php");
 }

@@ -1,7 +1,7 @@
 <?php
-
-if (isset($_SESSION['user'])) {
     require('HeadFooter/Header.php');
+if (isset($_SESSION['user'])) {
+
 } else {
     header("location: ../login.php");
 }
