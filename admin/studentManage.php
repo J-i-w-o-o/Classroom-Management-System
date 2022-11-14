@@ -16,36 +16,20 @@ if (isset($_SESSION['user'])) {
         <h1 class="text-center pt-3 fw-bold fst-italic">Add Users</h1>
         <div class="input-group mb-5 px-1">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
-        <input type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1" name="schoolID">
         </div>
 
         <div class="input-group mb-5 px-1">
         <span class="input-group-text">First Name</span>
-        <input type="text" aria-label="First name" placeholder="First Name" class="form-control">
+        <input type="text" aria-label="Firstname" placeholder="First Name" class="form-control" name="firstName">
        
         </div>
         <div class="input-group mb-5 px-1">
         <span class="input-group-text">Last Name</span>
-        <input type="text" aria-label="Last name" placeholder="Last Name" class="form-control">
+        <input type="text" aria-label="Lastname" placeholder="Last Name" class="form-control" name="lastName">
         </div>
 
-        <div class="input-group mb-5 px-1">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
-        <input type="text" class="form-control" placeholder="Age" aria-label="Age" aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-5 px-1">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-home" aria-hidden="true"></i></span>
-        <input type="text" class="form-control" placeholder="Address" aria-label="SchoolID" aria-describedby="basic-addon1">
-        </div>
-
-        <div class="px-1 pb-3">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Student</option>
-          <option value="2">Teacher</option>
-          <option value="3">Admin</option>
-        </select>
-        </div>
+        <!-- SECTION IS DROP DOWN -->
 
         <div class="d-flex justify-content-evenly py-2">
         <input type="submit" class="btn btn-success btn-lg mx-2" name="submit" value="Add User"></input>
