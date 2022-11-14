@@ -6,7 +6,12 @@
         });
         $(function () {
             $("#table").bootstrapTable()
-        })
+        });
+
+        function handleEdit(button){
+            $(this).data('edit-id');
+            console.log($('#btnEdit').data('edit-id'));
+        }
     });
 </script>
 </body>

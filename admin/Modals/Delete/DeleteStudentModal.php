@@ -1,4 +1,4 @@
-<?php session_start() ?>
+
 <!-- Modal -->
 <div class="modal fade" id="deleteStudentModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -9,7 +9,7 @@
         <h1 class="text-center pt-3 fw-bold fst-italic">Archive Student</h1>
         <div class="input-group mb-5 px-1">
         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
-        <input type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1" value="<?php echo $targetid ?>" name="schoolID" required>
+        <input type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1" value="" name="schoolID" required>
         </div>
 
         <div class="d-flex justify-content-evenly py-2 mb-4">

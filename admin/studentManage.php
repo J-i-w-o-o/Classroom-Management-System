@@ -43,7 +43,8 @@ if (isset($_SESSION['user'])) {
         
         <tbody>
           <?php 
-            require '../Components/fetchStudents.php'; // fetching all students from the database 
+            include '../Components/Database.php';
+            $students = $con->query("SELECT * FROM students WHERE status=1");
             if($students->num_rows > 0) {
               while($row = $students->fetch_assoc()){?>
 
@@ -53,21 +54,21 @@ if (isset($_SESSION['user'])) {
                   <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
                   <td><?php echo $row['section'] ?></td>
                   <td class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal">
+                    <button type="button" id="btnEdit" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
                     </button>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
+                    <button type="button" id="btnDelete" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
                         Delete
                       <i class="fa fa-trash h5" aria-hidden="true"></i>
                     </button>
-                    <?php $_SESSION['target-id'] = $row['student_id']; ?>
                   </td>
                 </tr>
               <?php
               }
             }
+            
           ?>
         </tbody>
       </table>
