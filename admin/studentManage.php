@@ -18,23 +18,57 @@ if (isset($_SESSION['user'])) {
       Add Student
     </button>
 
-    <?php require './Modals/AddStudentModal.php' ?>
+    <?php // Add Student Modal Pop-up
+      require './Modals/Add/AddStudentModal.php';
+      //require './Modals/Edit/EditStudentModal.php';
+      //require './Modals/Delete/DeleteStudentModal.php';
+    ?>
 
     <div class="container p-2 bg-white">
       <table
         id="table"
         data-show-columns="true"
         data-search="true"
-        data-url="json/data1.json"
+        data-url=""
         data-mobile-responsive="true"
         data-check-on-init="true">
         <thead>
           <tr>
             <th data-field="id" data-sortable="true">ID</th>
-            <th data-field="name" data-sortable="true">Item Name</th>
-            <th data-field="price" data-sortable="true">Item Price</th>
+            <th data-field="student-id" data-sortable="true">STUDENT ID</th>
+            <th data-field="name" data-sortable="true">NAME</th>
+            <th data-field="section">SECTION</th>
+            <th>ACTION</th>
           </tr>
         </thead>
+        <tbody>
+          <?php 
+            require '../Components/fetchStudents.php'; // fetching all students from the database 
+            if($students->num_rows > 0) {
+              while($row = $students->fetch_assoc()){?>
+
+                <tr>
+                  <td><?php echo $row['id'] ?></td>
+                  <td><?php echo $row['student_id'] ?></td>
+                  <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
+                  <td><?php echo $row['section'] ?></td>
+                  <td class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#studentModal">
+                        Edit
+                        <i class="fa-solid fa-pen-to-square h5"></i>
+                    </button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#studentModal">
+                        Delete
+                      <i class="fa fa-trash h5" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+              <?php
+              }
+            }
+          ?>
+        </tbody>
       </table>
     </div>
 
