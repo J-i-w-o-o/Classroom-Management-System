@@ -46,10 +46,13 @@
                   <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
                   <td><?php echo $row['section'] ?></td>
                   <td class="d-flex justify-content-center">
-                    <button type="button" id="btnEdit" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal">
+                    <a href="admin_components/action.php?role=student&action=edit&id=<?php echo $row['id'] ?>">
+                    <button type="submit" class="btn btn-primary mx-1">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
                     </button>
+                    </a>
+                    
                     <!-- Button trigger modal -->
                     
                     <a href="admin_components/action.php?role=student&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">

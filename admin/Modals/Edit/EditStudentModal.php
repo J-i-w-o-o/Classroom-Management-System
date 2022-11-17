@@ -57,11 +57,3 @@
     </div>
   </div> 
 </div>
-
-<?php
-  require '../Components/Database.php';
-  if(isset($_POST['editStudentSubmit'])){
-    
-  }
-  
-?>
