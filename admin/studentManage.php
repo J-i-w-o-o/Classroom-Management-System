@@ -1,6 +1,7 @@
 <?php
   require('../Components/usermanager.php');
   require('HeadFooter/Header.php');
+  require('admin_components/action.php');
 ?>
 
   <div class="x--main-container">
@@ -27,7 +28,7 @@
             <th data-field="id" data-sortable="true">ID</th>
             <th data-field="student-id" data-sortable="true">STUDENT ID</th>
             <th data-field="name" data-sortable="true">NAME</th>
-            <th data-field="section">SECTION</th>
+            <th data-field="section" data-sortable="true">SECTION</th>
             <th class="text-center">ACTION</th>
           </tr>
         </thead>
@@ -51,7 +52,7 @@
                     </button>
                     <!-- Button trigger modal -->
                     
-                    <a href="?role=student?action=delete?id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
+                    <a href="?role=student&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
                       <button type="submit" class="btn btn-danger mx-1">Delete
                         <i class="fa fa-trash h5" aria-hidden="true"></i>
                       </button>
