@@ -1,15 +1,7 @@
 <?php
   require('../Components/usermanager.php');
   require('HeadFooter/Header.php');
-if (isset($_SESSION['user'])) {
-
-} else {
-  header("location: ../login.php");
-}
-
 ?>
-
-
 
   <div class="x--main-container">
 
@@ -17,7 +9,6 @@ if (isset($_SESSION['user'])) {
     <?php 
       require './Modals/Add/AddStudentModal.php';// Add Student Modal Pop-up
       require './Modals/Edit/EditStudentModal.php'; // Edit Student Modal Pop-up
-      require './Modals/Delete/DeleteStudentModal.php';
     ?>
 
     <div class="container-lg p-2 bg-white">
@@ -59,10 +50,13 @@ if (isset($_SESSION['user'])) {
                         <i class="fa-solid fa-pen-to-square h5"></i>
                     </button>
                     <!-- Button trigger modal -->
-                    <button type="button" id="btnDelete" class="btn btn-danger mx-1" data-toggle="modal" data-target="#deleteStudentModal">
-                        Delete
-                      <i class="fa fa-trash h5" aria-hidden="true"></i>
-                    </button>
+                    
+                    <a href="?role=student?action=delete?id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
+                      <button type="submit" class="btn btn-danger mx-1">Delete
+                        <i class="fa fa-trash h5" aria-hidden="true"></i>
+                      </button>
+                    </a>
+                    
                   </td>
                 </tr>
               <?php
