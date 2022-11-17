@@ -19,6 +19,7 @@
         id="table"
         data-show-columns="true"
         data-search="true"
+        data-show-refresh="true"
         data-url=""
         data-mobile-responsive="true"
         data-check-on-init="true">
