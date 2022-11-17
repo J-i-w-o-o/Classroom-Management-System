@@ -58,7 +58,7 @@
                     </div>
                 </li>
                 <li class="item">
-                    <a href="#" class="menu-btn">
+                    <a href="../aboutUs.php" class="menu-btn">
                         <i class="fas fa-info-circle"></i><span>About</span>
                     </a>
                 </li>

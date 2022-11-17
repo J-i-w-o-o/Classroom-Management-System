@@ -77,8 +77,8 @@
                         </div>
                     </li>
                     <li class="x--item">
-                        <a href="#" class="x--menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About</span>
+                        <a href="../aboutUs.php" class="x--menu-btn">
+                            <i class="fas fa-info-circle"></i><span>About Us</span>
                         </a>
                     </li>
                     <li class="x--item">
