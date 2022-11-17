@@ -21,7 +21,7 @@
         break;
       case 'delete':
         $res = $con->query("UPDATE students SET status=0 WHERE id='$id'");
-        if($res) header("refresh:0.5; ../studentManage.php");
+        if($res) header("refresh:0.3; ../studentManage.php");
         else {
           mysqli_error($con);
           header("refresh:2; ../studentManage.php");
