@@ -1,7 +1,6 @@
 <?php
   require('../Components/usermanager.php');
   require('HeadFooter/Header.php');
-  require('admin_components/action.php');
 ?>
 
   <div class="x--main-container">
@@ -52,7 +51,7 @@
                     </button>
                     <!-- Button trigger modal -->
                     
-                    <a href="?role=student&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
+                    <a href="admin_components/action.php?role=student&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
                       <button type="submit" class="btn btn-danger mx-1">Delete
                         <i class="fa fa-trash h5" aria-hidden="true"></i>
                       </button>
