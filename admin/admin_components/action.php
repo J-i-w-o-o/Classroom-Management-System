@@ -38,5 +38,13 @@
         break;
     }
   }
+  else if($role == 'admin'){
+    switch($action){
+      case 'edit':
+        break;
+      case 'delete':
+        break;
+    }
+  }
   
 ?>

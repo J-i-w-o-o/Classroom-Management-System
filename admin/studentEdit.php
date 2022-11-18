@@ -63,8 +63,6 @@ if(!$id || !$student_id || !$first_name || !$last_name || !$section)
           <a href="studentManage.php" ><input type="button" class="btn btn-danger btn-lg mx-2"  value="Close"></input></a>
         </div>
         
-        
-
       </form> 
       <?php
           if(isset($_POST['submitEdit'])){
