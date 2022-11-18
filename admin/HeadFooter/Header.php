@@ -1,6 +1,13 @@
 <?php
 session_start();
 require('../Components/Database.php');
+
+if(isset($_SESSION['user'])){
+
+}else {
+    header("location: ../login.php");
+}
+
 $user       =   $_SESSION['user'];
 $school_id  =   $_SESSION['school_id'];
 $first_name =   $_SESSION['first_name'];
