@@ -65,18 +65,40 @@ if (isset($_POST['addingStudentSubmit'])) {
   $fname = $_POST['firstName'];
   $lname = $_POST['lastName'];
   $section = $_POST['section'];
+  
+  $options = [
+    'cost' => 10,
+  ];
+  $hashedpassword = password_hash($password, PASSWORD_BCRYPT, $options);
 
 
   $checkSchoolID = mysqli_query($con, "SELECT *  FROM students where school_id = '$school_id' ");
   if (mysqli_num_rows($checkSchoolID)) { ?>
-       <div class="alert alert-danger text-center mx-5" role="alert">User Already Exist!
-    <button type="button" class="btn-close btn-close-white" data-dismiss="alert" aria-label="Close"></button>
+    <div class="alert alert-danger text-center mx-5" role="alert">User Already Exist!
+      <button type="button" class="btn-close btn-close-white" data-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php
     $checkSchoolID = null;
   } else {
     $res = $con->query("INSERT INTO `students`(`school_id`, `first_name`, `last_name`, `section`, `status`) 
   VALUES ('$school_id','$fname','$lname','$section', 1)");
+
+    $sql = "INSERT INTO `users`(`school_id`, `first_name`, `last_name`, `password`, `role`) 
+VALUES ('$school_id', '$fname', '$lname', '$hashedpassword', 'student')";
+    $con->query($sql);
+
+    $sql = "SELECT * FROM users WHERE school_id='$school_id' AND first_name='$fname'";
+    $res = $con->query($sql);
+
+    if (mysqli_num_rows($res) > 0) {
+      while ($row = mysqli_fetch_assoc($res)) {
+        $school_id = $row['school_id'];
+        $sql2 = "INSERT INTO `profileimg`(`school_id`, `status`) VALUES ('$school_id','1')";
+        $con->query($sql2);
+      }
+    } else {
+      echo "You have an error!";
+    }
   }
 }
 
