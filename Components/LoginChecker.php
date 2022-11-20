@@ -29,10 +29,15 @@
         header("Location: ./instructor/dashboard.php");
       }
       else {
-        header("Location: ./login.php?error= Incorrect Username or Password");
+        header("Location: ./login.php?");
       }
       
     } 
+    else {
+      header("Location: ./login.php?error= Incorrect Username or Password");
+    }
+    
+
 
   }
   ?>
