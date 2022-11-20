@@ -1,5 +1,5 @@
 <?php
-  require('HeadFooter/Header.php');
+  require('includes/Header.php');
 if (isset($_SESSION['user'])) {
 
 } else {
@@ -30,6 +30,6 @@ if (isset($_SESSION['user'])) {
 </div>
 
 <?php
-require('HeadFooter/Footer.php');
+require('includes/Footer.php');
 ?>
 

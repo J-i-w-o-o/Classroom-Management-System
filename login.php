@@ -15,12 +15,14 @@ require('./Components/LoginChecker.php') ?>
   <div class="center">
     <h1>Login</h1>
     <form method="post">
-      <?php 
+      <?php
       if (isset($_GET['error'])){ ?>
+      
         <div class="alert alert-danger" role="alert">
+          
        <?=$_GET['error']?>
       </div>
-      <?php } ?>
+        <?php } ?>
       <div class="txt_field">
         <input type="text" name="schoolID" required>
         <span></span>

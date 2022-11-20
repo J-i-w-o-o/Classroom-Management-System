@@ -12,7 +12,7 @@
         if($row){
           header(
             "location: ../studentEdit.php?id=".$row['id'].
-            "&student_id=".$row['student_id'].
+            "&school_id=".$row['school_id'].
             "&first_name=".$row['first_name'].
             "&last_name=".$row['last_name'].
             "&section=".$row['section']
@@ -41,8 +41,24 @@
   else if($role == 'admin'){
     switch($action){
       case 'edit':
+        $res = $con->query("SELECT * FROM admins WHERE id='$id'");
+        $row = $res->fetch_assoc();
+        if($row){
+          header(
+            "location: ../adminEdit.php?id=".$row['id'].
+            "&school_id=".$row['school_id'].
+            "&first_name=".$row['first_name'].
+            "&last_name=".$row['last_name']
+          );
+        }
         break;
       case 'delete':
+        $res = $con->query("UPDATE admins SET status=0 WHERE id='$id'");
+        if($res) header("refresh:0.3; ../adminManage.php");
+        else {
+          mysqli_error($con);
+          header("refresh:2; ../adminManage.php");
+        }
         break;
     }
   }

@@ -1,5 +1,5 @@
 <?php
-    require('HeadFooter/Header.php');
+    require('includes/Header.php');
 ?>
 
 <div class="x--main-container">
@@ -14,5 +14,5 @@
     </div>
 </div>
 <?php
-require('HeadFooter/Footer.php');
+require('includes/Footer.php');
 ?>

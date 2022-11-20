@@ -55,7 +55,7 @@
                         <div class="x--sub-menu">
                             <a href="studentManage.php"><i class="fa-solid fa-user-gear"></i><span>Student</span></a>
                             <a href="update_delete.php"><i class="fa-solid fa-user-gear"></i><span>Teacher</span></a>
-                            <a href="#"><i class="fa-solid fa-user-gear"></i><span>Admin</span></a>
+                            <a href="adminManage.php"><i class="fa-solid fa-user-gear"></i><span>Admin</span></a>
                         </div>
                     </li>
                     <li class="x--item" id="messages">
@@ -63,8 +63,8 @@
                             <i class="fa-solid fa-chalkboard-user"></i><span>Manage Class &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="addClass.php"><i class="fa-solid fa-plus"></i></i><span>Add Class</span></a>
-                            <a href="#"><i class="fa-solid fa-gears"></i><span>Update/Delete Class</span></a>
+                            <a href="sectionManage.php"><i class="fa-solid fa-user-group"></i><span>Manage Section</span></a>
+                            <a href="departmentManage.php"><i class="fa-solid fa-user-group"></i><span>Manage Department</span></a>
                         </div>
                     </li>
                     <li class="x--item" id="settings">

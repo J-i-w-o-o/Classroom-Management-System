@@ -1,6 +1,6 @@
 <?php
   require('../Components/usermanager.php');
-  require('HeadFooter/Header.php');
+  require('includes/Header.php');
 if (isset($_SESSION['user'])) {
 
 } else {
@@ -14,11 +14,12 @@ $targetid = null;
 
 <!-- modal imports -->
 <?php
-  require './Modals/Add/AddClassModal.php';
+  require './Modals/Add/AddSectionModal.php';
 
 ?>
 
-<div class="container-lg p-2 bg-white">
+<div class="container pt-5 "> 
+    <div class="container-lg p-2 bg-white rounded">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addClassModal">
       Add Class
     </button>
@@ -76,5 +77,5 @@ $targetid = null;
 
 
 <?php
-require('HeadFooter/Footer.php');
+require('includes/Footer.php');
 ?>
