@@ -15,8 +15,6 @@
       $_SESSION['school_id'] = $row['school_id'];
       $_SESSION['first_name'] = $row['first_name'];
       $_SESSION['last_name'] = $row['last_name'];
-      $_SESSION['age'] = $row['age'];
-      $_SESSION['address'] = $row['address'];
       $_SESSION['role'] = $row['role'];
 
       if($row['role']=='admin'){

@@ -12,8 +12,6 @@ $user       =   $_SESSION['user'];
 $school_id  =   $_SESSION['school_id'];
 $first_name =   $_SESSION['first_name'];
 $last_name  =   $_SESSION['last_name'];
-$age        =   $_SESSION['age'];
-$address    =   $_SESSION['address'];
 $role       =   $_SESSION['role'];
 require('../Components/upload.php');
 

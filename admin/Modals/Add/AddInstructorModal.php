@@ -41,6 +41,10 @@ if (isset($_POST['addingAdminSubmit'])) {
   $school_id = $_POST['schoolID'];
   $fname = $_POST['firstName'];
   $lname = $_POST['lastName'];
+  $options = [
+    'cost' => 10,
+  ];
+  $hashedpassword = password_hash($password, PASSWORD_BCRYPT, $options);
 
 
   $checkSchoolID = mysqli_query($con, "SELECT *  FROM admins where school_id = '$school_id' ");
@@ -51,8 +55,26 @@ if (isset($_POST['addingAdminSubmit'])) {
 <?php
     $checkSchoolID = null;
   } else {
-    $res = $con->query("INSERT INTO `admins`(`school_id`, `first_name`, `last_name`, `status`) 
+    $res = $con->query("INSERT INTO `instructors`(`school_id`, `first_name`, `last_name`, `status`) 
   VALUES ('$school_id','$fname','$lname', 1)");
+
+$sql = "INSERT INTO `users`(`school_id`, `first_name`, `last_name`, `password`, `role`) 
+VALUES ('$school_id', '$fname', '$lname', '$hashedpassword', 'teacher')";
+$con->query($sql);
+
+$sql = "SELECT * FROM users WHERE school_id='$school_id' AND first_name='$fname'";
+$res = $con->query($sql);
+
+if(mysqli_num_rows($res)>0){
+  while($row = mysqli_fetch_assoc($res)){
+    $school_id = $row['school_id'];
+    $sql2 = "INSERT INTO `profileimg`(`school_id`, `status`) VALUES ('$school_id','1')";
+    $con->query($sql2);
+  }
+  
+}else{
+  echo "You have an error!";
+}
   }
 }
 

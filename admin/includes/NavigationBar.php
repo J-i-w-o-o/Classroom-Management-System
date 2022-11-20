@@ -11,7 +11,7 @@
                         <i class="fas fa-bars"></i>
                     </div>
                     <ul>
-                        <li><a href="#"><i class="fas fa-user"></i></a></li>
+                        <li><a href="profile.php"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>

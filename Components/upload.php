@@ -41,15 +41,16 @@ if(isset($_POST['upload'])) {
                 move_uploaded_file($filetmpName,$fileDestination);
                 $sql = "UPDATE profileimg SET status=0 WHERE school_id='$school_id';";
                 $res = $con->query($sql);
+                header("Location: ../admin/profile.php");
 
             }else {
-                echo "Exceeded File size limit!";
+                header("Location: ../admin/profile.php?error= File Size Exceeded");
             }
         }else{
-            echo "Error Uploading File!";
+           header("Location: ../admin/profile.php?error= Error Uploading File!");
         }
     } else {
-        echo "Error file type!";
+        header("Location: ../admin/profile.php?error= Error File Type!");
     }
 }
 ?>
