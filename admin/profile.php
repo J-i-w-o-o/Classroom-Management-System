@@ -15,7 +15,11 @@
       <input type="file" name="file">
       <button type="submit" name="upload">Upload</button>
     </form>
+
+    
+
   </div>
+
 <?php
 require('includes/Footer.php');
 ?>
