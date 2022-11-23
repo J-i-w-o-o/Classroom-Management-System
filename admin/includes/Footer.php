@@ -15,6 +15,11 @@
             console.log($('#btnEdit').data('edit-id'));
         }
     });
+    $('#tableView').DataTable( {
+        "pageLength": 10,
+        "lengthChange": false,
+    responsive: true
+} );
 </script>
 </body>
 </html>

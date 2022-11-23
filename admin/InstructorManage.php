@@ -7,26 +7,19 @@
 
     <!-- modal imports -->
     <?php 
-      require './Modals/Add/AddAdminModal.php';// Add Student Modal Pop-up
+      require './Modals/Add/AddInstructorModal.php';// Add Student Modal Pop-up
     ?>
-  <div class="container pt-5 "> 
+  <div class="container pt-4 "> 
     <div class="container-lg p-2 bg-white rounded">
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adminModal">
-      Add Admin
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#instructorModal">
+      Add Teacher
     </button>
-      <table
-        id="table"
-        data-show-columns="true"
-        data-search="true"
-        data-show-refresh="true"
-        data-url=""
-        data-mobile-responsive="true"
-        data-check-on-init="true">
+    <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>
           <tr>
-            <th data-field="id" data-sortable="true">ID</th>
-            <th data-field="school_id" data-sortable="true">Admin ID</th>
-            <th data-field="name" data-sortable="true">NAME</th>
+            <th class="text-center">ID</th>
+            <th class="text-start">TEACHER ID</th>
+            <th class="text-center">NAME</th>
             <th class="text-center">ACTION</th>
           </tr>
         </thead>
@@ -34,16 +27,16 @@
         <tbody>
           <?php 
 
-            $admins = $con->query("SELECT * FROM admins WHERE status=1");
+            $admins = $con->query("SELECT * FROM instructors WHERE status=1");
             if($admins->num_rows > 0) {
               while($row = $admins->fetch_assoc()){?>
 
                 <tr>
-                  <td><?php echo $row['id'] ?></td>
-                  <td><?php echo $row['school_id'] ?></td>
-                  <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
-                  <td class="d-flex justify-content-center">
-                    <a href="admin_components/action.php?role=admin&action=edit&id=<?php echo $row['id'] ?>">
+                  <td class="text-center  align-middle"><?php echo $row['id'] ?></td>
+                  <td class="text-start  align-middle"><?php echo $row['school_id'] ?></td>
+                  <td class="text-center  align-middle"><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
+                  <td class="text-center  align-middle">
+                    <a href="admin_components/action.php?role=instructor&action=edit&id=<?php echo $row['id'] ?>">
                     <button type="submit" class="btn btn-primary mx-1">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
@@ -52,7 +45,7 @@
                     
                     <!-- Button trigger modal -->
                     
-                    <a href="admin_components/action.php?role=admin&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
+                    <a href="admin_components/action.php?role=instructor&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
                       <button type="submit" class="btn btn-danger mx-1">Delete
                         <i class="fa fa-trash h5" aria-hidden="true"></i>
                       </button>
