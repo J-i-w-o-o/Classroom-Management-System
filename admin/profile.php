@@ -3,6 +3,8 @@
 ?>
 
   <div class="x--main-container">
+    <div class="row">
+      <div class="col-4 bg-light">
   <?php
       if (isset($_GET['error'])){ ?>
       
@@ -16,8 +18,12 @@
       <button type="submit" name="upload">Upload</button>
     </form>
 
-    
+        <div class="col-8 bg-dark">
 
+        </div>
+
+      </div>
+    </div>
   </div>
 
 <?php
