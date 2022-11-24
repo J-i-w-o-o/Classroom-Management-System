@@ -2,8 +2,8 @@
   require('includes/Header.php');
 ?>
 
-  <link rel="stylesheet" href="../main-css/profile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="../main-css/profile.css">
 
   <div class="x--main-container">
     <div class="container-fluid">
@@ -86,8 +86,65 @@
 
     </div>
         
-        <div class="col-8 bg-info">
-          
+        <div class="col-8 bg-info ">
+
+          <div class="yearCourseSemester">
+            
+            <div class="text text-start fs-4 fw-bold mt-3 mb-1  mx-3">
+            Year - Course - Section - Semester
+            </div>
+
+            <div class="d-flex justify-content-start">
+
+            <div class="buttonsYear">
+            <div class="btn-group">
+
+                <button type="button" class="btn btn-primary dropdown-toggle mx-3" data-toggle='dropdown' aria-expanded="false">
+                  1st Year
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">1st Year</a></li>
+                  <li><a class="dropdown-item" href="#">2nd Year</a></li>
+                  <li><a class="dropdown-item" href="#">3rd Year</a></li>
+                  <li><a class="dropdown-item" href="#">4th Year</a></li>
+                </ul>
+
+            </div>
+            </div>
+            
+            <div class="buttonsCourse">
+            <div class="btn-group">
+
+                <button type="button" class="btn btn-primary dropdown-toggle " data-toggle='dropdown' aria-expanded="false">
+                  Course
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Bachelor of Science in Computer Science</a></li>
+                  <li><a class="dropdown-item" href="#">Bachelor of Science in Information System</a></li>
+                  <li><a class="dropdown-item" href="#">Bachelor of Science in Information Technology</a></li>
+                  <li><a class="dropdown-item" href="#">Bachelor of Science in Entertainment and Multimedia Computing</a></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="buttonsSemester">
+            <div class="btn-group">
+
+                <button type="button" class="btn btn-primary dropdown-toggle mx-3" data-toggle='dropdown' aria-expanded="false">
+                  Semester
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">1st Semester</a></li>
+                  <li><a class="dropdown-item" href="#">2nd Semester</a></li>
+                  <li><a class="dropdown-item" href="#">Summer Class</a></li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          </div>
         </div>
 
       
