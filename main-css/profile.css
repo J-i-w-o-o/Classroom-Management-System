@@ -1,7 +1,6 @@
-.upload {
-    width: 200px;
+/* .upload {
     position: relative;
-}
+} */
 
 .upload img {
     border-radius: 50%;
@@ -12,7 +11,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background: #00b4ff;
+    background: #00b4ff;    
     width: 32px;
     height: 32px;
     line-height: 33px;
@@ -31,3 +30,6 @@ input[type=file]::-webkit-file-upload-button{
     cursor: pointer;
 }
 
+#facebookUsernameEmail{
+    color: #4267B2;
+}
