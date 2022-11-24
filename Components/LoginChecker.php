@@ -23,7 +23,7 @@
       else if($row['role']=='student'){
         header("Location: ./user/dashboard.php");
       }
-      else if($row['role']=='student'){
+      else if($row['role']=='instructor'){
         header("Location: ./instructor/dashboard.php");
       }
       else {

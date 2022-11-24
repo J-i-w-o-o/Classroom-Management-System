@@ -9,25 +9,18 @@
     <?php 
       require './Modals/Add/AddStudentModal.php';// Add Student Modal Pop-up
     ?>
-  <div class="container pt-5 "> 
+  <div class="container pt-4 "> 
     <div class="container-lg p-2 bg-white rounded">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#studentModal">
       Add Student
     </button>
-      <table
-        id="table"
-        data-show-columns="true"
-        data-search="true"
-        data-show-refresh="true"
-        data-url=""
-        data-mobile-responsive="true"
-        data-check-on-init="true">
+      <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>
           <tr>
-            <th data-field="id" data-sortable="true">ID</th>
-            <th data-field="school_id" data-sortable="true">STUDENT ID</th>
-            <th data-field="name" data-sortable="true">NAME</th>
-            <th data-field="section" data-sortable="true">SECTION</th>
+            <th class="text-center">ID</th>
+            <th class="text-start">STUDENT ID</th>
+            <th class="text-center">NAME</th>
+            <th class="text-center">SECTION</th>
             <th class="text-center">ACTION</th>
           </tr>
         </thead>
@@ -40,11 +33,11 @@
               while($row = $students->fetch_assoc()){?>
 
                 <tr>
-                  <td><?php echo $row['id'] ?></td>
-                  <td><?php echo $row['school_id'] ?></td>
-                  <td><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
-                  <td><?php echo $row['section'] ?></td>
-                  <td class="d-flex justify-content-center">
+                  <td class="text-center  align-middle"><?php echo $row['id'] ?></td>
+                  <td class="text-start  align-middle"><?php echo $row['school_id'] ?></td>
+                  <td class="text-center  align-middle"><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
+                  <td class="text-center  align-middle"><?php echo $row['section'] ?></td>
+                  <td class="text-center  align-middle">
                     <a href="admin_components/action.php?role=student&action=edit&id=<?php echo $row['id'] ?>">
                     <button type="submit" class="btn btn-primary mx-1">
                         Edit

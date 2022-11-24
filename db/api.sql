@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2022 at 09:49 PM
+-- Generation Time: Nov 23, 2022 at 08:52 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -40,34 +40,28 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `school_id`, `first_name`, `last_name`, `status`) VALUES
-(1, 'admin2', 'andriel', 'gabriel', 0),
-(2, 'admin32', '123xdgsdgs', '123', 1),
-(3, 'asdada', 'asdasd', 'asdadad', 1),
-(4, 'admin', 'asd', 'asdasd', 1),
-(5, 'admin123', 'jiwoo', 'meow', 1),
-(6, 'admin321', 'meow', 'lol', 1),
-(7, 'adminadmin', '123', '123', 1),
-(8, 'admin03', 'jiwoo', 'jwii', 1),
-(9, 'admin07', 'tanginamo', 'haha', 1);
+(10, 'admin01', 'Patrick', 'Garcia', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `departments`
+-- Table structure for table `instructors`
 --
 
-CREATE TABLE `departments` (
+CREATE TABLE `instructors` (
   `id` int(11) NOT NULL,
-  `department` varchar(155) NOT NULL
+  `school_id` varchar(100) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `departments`
+-- Dumping data for table `instructors`
 --
 
-INSERT INTO `departments` (`id`, `department`) VALUES
-(1, 'Department ni jiwoo'),
-(2, 'Computer Science Department');
+INSERT INTO `instructors` (`id`, `school_id`, `first_name`, `last_name`, `status`) VALUES
+(3, 'Instructor1', 'Miku', 'Miku', 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +83,26 @@ INSERT INTO `profileimg` (`id`, `school_id`, `status`) VALUES
 (35, '20201138-M', 0),
 (51, 'admin03', 0),
 (52, 'test', 1),
-(53, 'admin07', 0);
+(53, 'admin07', 0),
+(54, 'Instructor1-M', 1),
+(55, 'Instructor2-M', 1),
+(56, 'admin01', 0),
+(57, '20201138-M', 1),
+(58, '20201132-M', 1),
+(59, '20201132-M', 1),
+(60, '20201132-M', 1),
+(61, '20201132-M', 1),
+(62, '20201132-M', 1),
+(63, '20201132-M', 1),
+(64, '20201132-M', 1),
+(65, '20201132-M', 1),
+(66, '20201132-M', 1),
+(67, '20201132-M', 1),
+(68, '20201138-M', 1),
+(69, '20201138-M', 1),
+(70, 'Instructor1', 1),
+(71, '20201138-M', 1),
+(72, '20201132-M', 1);
 
 -- --------------------------------------------------------
 
@@ -108,9 +121,7 @@ CREATE TABLE `sections` (
 --
 
 INSERT INTO `sections` (`id`, `course`, `section`) VALUES
-(1, 'BSCS', '3C'),
-(2, 'BSCS', '3A'),
-(3, 'BSIT', '1A');
+(5, 'BSCS', '3A');
 
 -- --------------------------------------------------------
 
@@ -132,13 +143,28 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `school_id`, `first_name`, `last_name`, `section`, `status`) VALUES
-(1, '202011322-MS', 'geo', 'gabriela', 'BSCS-3C', 1),
-(11, '20201132-M', 'Daniel', 'Sigue', 'BSCS-3C', 1),
-(22, '20201139-M', 'patwik', 'tite', 'BSCS-3C', 0),
-(23, '20201138-M', 'dsad', 'asdasd', 'BSCS-3C', 0),
-(24, '2020113-M', 'sadsad', 'asdsadasdad', 'BSCS-3C', 0),
-(25, '202012313-M', 'asfaf', 'asdfsad', 'BSCS-3A', 0),
-(26, 'test', '123', '123', 'BSCS-3C', 1);
+(33, '20201138-M', 'Andriel', 'Gabriel', 'BSCS-3A', 1),
+(34, '20201132-M', 'Jiwoo', 'Gabriel', 'BSCS-3A', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subjects`
+--
+
+CREATE TABLE `subjects` (
+  `id` int(11) NOT NULL,
+  `subject` varchar(155) NOT NULL,
+  `subject_code` varchar(11) NOT NULL,
+  `course` varchar(155) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `subjects`
+--
+
+INSERT INTO `subjects` (`id`, `subject`, `subject_code`, `course`) VALUES
+(19, 'INTERMEDIATE PROGRAMMING', 'CCS 103', 'BSCS');
 
 -- --------------------------------------------------------
 
@@ -162,13 +188,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `uid`, `school_id`, `first_name`, `last_name`, `password`, `role`) VALUES
 (1, '', 'admin', 'admin', 'admin', '$2y$10$Z5/0HjMi/N23utTk6Zl0y.Q903eURA5oaFTJPOTlDhwPKjfkn7Zfi', 'admin'),
-(45, '', '20201138-M', 'Andriel Geomer Villas', 'Gabriel', '$2y$10$.iaD1CqtopsGkpJUTF4.yeqnjZsmzDGRJ3GysISORz6VAlvoOwFGW', 'admin'),
-(51, '', 'admin123', 'jiwoo', 'meow', '$2y$10$.ohLLfuJ1XV2lQMgfAZPQ.1h8ZFZssIUoPlNM/73ZV7If7M53i9tC', 'admin'),
-(52, '', 'admin321', 'meow', 'lol', '$2y$10$WqK8gpmlF/jgggNxvuMK4OG0KTUUvMQKsXJsQw/lot.zS2H.i2D2u', 'admin'),
-(53, '', 'adminadmin', '123', '123', '$2y$10$pCdLSEz6Zamitqbf4S/XeOICmDrqAJ5Rgb.bjphTd3n3jKyYw5Uhy', 'admin'),
-(54, '', 'admin03', 'jiwoo', 'jwii', '$2y$10$Sax8hBBUQKKp2PIxrtRMruMqxlmFillLog21rkMh0ZiEdYcMBormy', 'admin'),
-(55, '', 'test', '123', '123', '', 'student'),
-(56, '', 'admin07', 'tanginamo', 'haha', '$2y$10$5/21YyCYlEoGZ8y3FQCdL.05i.SFvA9gbHoJmJorbvySQWWe4sPnO', 'admin');
+(59, '', 'admin01', 'Patrick', 'Garcia', '$2y$10$hnEOvbgpIDnKLlqaGBdRguJ4KxifOXHSpgok5IuSrlqZzryAsT3Fq', 'admin'),
+(66, '', 'Instructor1', 'Miku', 'Miku', '$2y$10$2jCHA13rGtSUGLHGjPcNve.tJCE4zO3WzUB9ifb4FzLuFM5Ndwdmm', 'instructor'),
+(67, '', '20201138-M', 'Andriel', 'Gabriel', '$2y$10$ONsKlWKpBNJs.C5qVW.u5Op4E8nqO/jy.7.t2PWEPMIit/DlN7LgG', 'student'),
+(68, '', '20201132-M', 'Jiwoo', 'Jiwoo', '$2y$10$D1G8D2FrUacMh4U7s988auD6pjNNzMdUHlLYEAFYV0MI2FcSLq8qO', 'student');
 
 --
 -- Indexes for dumped tables
@@ -181,9 +204,9 @@ ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `departments`
+-- Indexes for table `instructors`
 --
-ALTER TABLE `departments`
+ALTER TABLE `instructors`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -205,6 +228,12 @@ ALTER TABLE `students`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subjects`
+--
+ALTER TABLE `subjects`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -218,37 +247,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `departments`
+-- AUTO_INCREMENT for table `instructors`
 --
-ALTER TABLE `departments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `instructors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `profileimg`
 --
 ALTER TABLE `profileimg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `subjects`
+--
+ALTER TABLE `subjects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

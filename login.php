@@ -8,12 +8,14 @@ require('./Components/LoginChecker.php') ?>
 <html lang="en">
 
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <title>LOGIN</title>
 </head>
 
 <body>
+  <img src="uploads/ucc-bg.jpg" class="img-fluid">   
   <div class="center">
-    <h1>Login</h1>
+    <h1 class="h1">LOGIN</h1>
     <form method="post">
       <?php
       if (isset($_GET['error'])){ ?>
@@ -26,7 +28,7 @@ require('./Components/LoginChecker.php') ?>
       <div class="txt_field">
         <input type="text" name="schoolID" required>
         <span></span>
-        <label>School ID</label>
+        <label class="h1">School ID</label>
       </div>
       <div class="txt_field">
         <input type="password" name="password" required>

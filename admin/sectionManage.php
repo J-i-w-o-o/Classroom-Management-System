@@ -18,23 +18,17 @@ $targetid = null;
 
 ?>
 
-<div class="container pt-5 "> 
+<div class="container pt-4 "> 
     <div class="container-lg p-2 bg-white rounded">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addClassModal">
       Add Class
     </button>
-      <table
-        id="table"
-        data-show-columns="true"
-        data-search="true"
-        data-url=""
-        data-mobile-responsive="true"
-        data-check-on-init="true">
+    <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>
           <tr>
-            <th data-field="id" data-sortable="true">ID</th>
-            <th data-field="name" data-sortable="true">COURSE</th>
-            <th data-field="section">SECTION</th>
+            <th class="text-center">ID</th>
+            <th class="text-start">COURSE</th>
+            <th class="text-center">SECTION</th>
             <th class="text-center">ACTION</th>
           </tr>
         </thead>
@@ -47,10 +41,10 @@ $targetid = null;
               while($row = $sections->fetch_assoc()){?>
 
                 <tr>
-                  <td><?php echo $row['id'] ?></td>
-                  <td><?php echo $row['course'] ?></td>
-                  <td><?php echo $row['section'] ?></td>
-                  <td class="d-flex justify-content-center">
+                  <td class="text-center  align-middle"><?php echo $row['id'] ?></td>
+                  <td class="text-start  align-middle"><?php echo $row['course'] ?></td>
+                  <td class="text-center  align-middle"><?php echo $row['section'] ?></td>
+                  <td class="text-center  align-middle">
                     <button type="button" class="btn btn-primary mx-1" data-toggle="modal" data-target="#editStudentModal" >
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>

@@ -8,7 +8,7 @@ $last_name = isset($_GET['last_name']) ? $_GET['last_name'] : null;
 
 
 if(!$id || !$school_id || !$first_name || !$last_name) 
-  echo '<script>alert("Invalid Parameter"); window.location.href="adminManage.php"</script>';
+  echo '<script>alert("Invalid Parameter"); window.location.href="instructorManage.php"</script>';
 
 ?>
 <div class="x--main-container">
@@ -40,7 +40,7 @@ if(!$id || !$school_id || !$first_name || !$last_name)
 
         <div class="d-flex justify-content-center py-2 mb-4">
           <input type="submit" name="submitEdit" class="btn btn-primary btn-lg mx-2" value="Edit"></input>
-          <a href="adminManage.php" ><input type="button" class="btn btn-danger btn-lg mx-2"  value="Close"></input></a>
+          <a href="instructorManage.php" ><input type="button" class="btn btn-danger btn-lg mx-2"  value="Close"></input></a>
         </div>
         
       </form> 
@@ -50,13 +50,13 @@ if(!$id || !$school_id || !$first_name || !$last_name)
             $first_name = $_POST['first_name'];
             $last_name = $_POST['last_name'];
 
-            $res = $con->query("UPDATE admins SET 
+            $res = $con->query("UPDATE instructors SET 
               school_id='$school_id', 
               first_name='$first_name', 
               last_name='$last_name'
               WHERE id='$id'"
             );
-            echo '<script>window.location.href="adminManage.php"</script>';
+            echo '<script>window.location.href="insturctorManage.php"</script>';
           }
         ?>
     </div>

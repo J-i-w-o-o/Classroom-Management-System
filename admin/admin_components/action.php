@@ -29,12 +29,27 @@
         break;
     }
   }
-  else if($role == 'teacher'){
+  else if($role == 'instructor'){
     switch($action){
       case 'edit':
+        $res = $con->query("SELECT * FROM instructors WHERE id='$id'");
+        $row = $res->fetch_assoc();
+        if($row){
+          header(
+            "location: ../instructorEdit.php?id=".$row['id'].
+            "&school_id=".$row['school_id'].
+            "&first_name=".$row['first_name'].
+            "&last_name=".$row['last_name']
+          );
+        }
         break;
       case 'delete':
-        
+        $res = $con->query("UPDATE instructors SET status=0 WHERE id='$id'");
+        if($res) header("refresh:0.3; ../instructorManage.php");
+        else {
+          mysqli_error($con);
+          header("refresh:2; ../instructorManage.php");
+        }
         break;
     }
   }

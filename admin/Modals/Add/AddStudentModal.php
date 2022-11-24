@@ -65,10 +65,12 @@ if (isset($_POST['addingStudentSubmit'])) {
   $fname = $_POST['firstName'];
   $lname = $_POST['lastName'];
   $section = $_POST['section'];
+  $password =$_POST['schoolID'];
   
   $options = [
     'cost' => 10,
   ];
+  
   $hashedpassword = password_hash($password, PASSWORD_BCRYPT, $options);
 
 
