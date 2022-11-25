@@ -10,24 +10,18 @@
     <div class="row">
 
       <div class="col-4 bg-light pt-4 pb-5">
-        
-        <div class="upload text-center">
-          <img src="../img/userIconImage.jpg" width = 230 height = 230 class="picture mb-3 img-thumbnail">
-            <?php
-                if (isset($_GET['error'])){ ?>
-                
-                  <div class="alert alert-danger" role="alert">
-                    
-                <?=$_GET['error']?>
-                </div>
-                  <?php } ?>
-        <div class="round">
-        <i class="fa-regular fa-camera" style="color: #fff"></i>
-            <form method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <button type="submit" name="upload">Upload</button>
-            </form>
-        </div>
+      <?php
+      if (isset($_GET['error'])){ ?>
+      
+        <div class="alert alert-danger" role="alert">
+          
+       <?=$_GET['error']?>
+      </div>
+        <?php } ?>
+  <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <button type="submit" name="upload">Upload</button>
+    </form>
         
       </div>
       <div class="d-flex flex-row align-items-center mb-1">
