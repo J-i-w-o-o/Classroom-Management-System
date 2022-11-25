@@ -30,11 +30,14 @@
         </div>
         
       </div>
+      <div class="d-flex flex-row align-items-center mb-1">
+      <input type="text" readonly class="form-control-plaintext text-center" id="staticSchoolIdNumber" value="20200114-M">
       <input type="text" readonly class="form-control-plaintext text-center" id="staticName" value="John Doe">
+      </div>
       <input type="text" readonly class="form-control-plaintext text-center" id="staticAddress" value="4321 Sampaloc St. Corner Olda St. Mesa Manila">
       <div class="d-flex flex-row align-items-center mb-1">
-      <input type="text" readonly class="form-control-plaintext text-center" id="staticContactNumber" value="0929 555 1328">
       <input type="text" readonly class="form-control-plaintext text-center" id="staticBirthdate" value="December 25, 2001 ">
+      <input type="text" readonly class="form-control-plaintext text-center" id="staticContactNumber" value="0929 555 1328">
       </div>
 
       <!-- // GMAIL Account -->
@@ -86,7 +89,7 @@
 
     </div>
         
-        <div class="col-8 bg-info ">
+        <div class="col-8 bg-light ">
 
           <div class="yearCourseSemester">
             
@@ -97,7 +100,7 @@
             <div class="d-flex justify-content-start">
 
             <div class="buttonsYear">
-            <div class="btn-group">
+              <div class="btn-group">
 
                 <button type="button" class="btn btn-primary dropdown-toggle mx-3" data-toggle='dropdown' aria-expanded="false">
                   1st Year
@@ -109,13 +112,13 @@
                   <li><a class="dropdown-item" href="#">4th Year</a></li>
                 </ul>
 
-            </div>
+              </div>
             </div>
             
             <div class="buttonsCourse">
             <div class="btn-group">
 
-                <button type="button" class="btn btn-primary dropdown-toggle " data-toggle='dropdown' aria-expanded="false">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle='dropdown' aria-expanded="false">
                   Course
                 </button>
                 <ul class="dropdown-menu">
@@ -129,9 +132,9 @@
             </div>
 
             <div class="buttonsSemester">
-            <div class="btn-group">
+              <div class="btn-group">
 
-                <button type="button" class="btn btn-primary dropdown-toggle mx-3" data-toggle='dropdown' aria-expanded="false">
+                <button type="button" class="btn btn-primary dropdown-toggle mx-3 mb-3" data-toggle='dropdown' aria-expanded="false">
                   Semester
                 </button>
                 <ul class="dropdown-menu">
@@ -142,8 +145,36 @@
 
               </div>
             </div>
-
           </div>
+
+          <div class="subjectEnrolled mx-3 mb-3">
+              <span class="subjectEnrolledText fw-bold fs-4">Subjects Enrolled</span>
+
+              <ul class="list-group list-group-flush-numbered mt-2">
+                <li class="list-group-item">PE 004 Team Sports</li>
+                <li class="list-group-item">CCS 116 Advanced Web Systems</li>
+                <li class="list-group-item">GEC 008 Ethics</li>
+                <li class="list-group-item">RES 001 Methods of Research</li>
+                <li class="list-group-item">CS 108 Software Engineering 1</li>
+                <li class="list-group-item">CS 110 Networks and Communications</li>
+                <li class="list-group-item">GEC 007 Science, Technology, and Society</li>
+                <li class="list-group-item">CSE 102 Graphics and Visual Computing</li>
+              </ul>
+
+            </div>
+            
+            <div class="pendingTasks mx-3">
+
+            <span class="pendingTasksText fw-bold fs-4">Pending Tasks</span>
+
+            <ul class="list-group list-group-flush-numbered mt-2">
+                <li class="list-group-item">None</li>
+                <li class="list-group-item">None</li>
+                <li class="list-group-item">None</li>
+              </ul>
+
+            </div>
+
           </div>
         </div>
 
