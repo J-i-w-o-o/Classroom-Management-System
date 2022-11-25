@@ -14,7 +14,7 @@ if(isset($_POST['upload'])) {
     $allowed = array('jpg','jpeg','png','gif');
     if(in_array($fileActualExt, $allowed)){
         if($fileError === 0){
-            if ($fileSize < 512000 ) {
+            if ($fileSize < 512000 *5 ) {
                 $res = $con->query("SELECT status FROM profileimg WHERE school_id='$school_id'");
                 $row = $res->fetch_assoc();
                 $status = $row['status'];

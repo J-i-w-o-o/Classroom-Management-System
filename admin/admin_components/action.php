@@ -77,26 +77,49 @@
         break;
     }
   }
-  else if($role == 'admin'){
+  else if($role == 'subject'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM admins WHERE id='$id'");
+        $res = $con->query("SELECT * FROM subjects WHERE id='$id'");
         $row = $res->fetch_assoc();
         if($row){
           header(
-            "location: ../adminEdit.php?id=".$row['id'].
-            "&school_id=".$row['school_id'].
-            "&first_name=".$row['first_name'].
-            "&last_name=".$row['last_name']
+            "location: ../subjectEdit.php?id=".$row['id'].
+            "&subject=".$row['subject'].
+            "&subject_code=".$row['subject_code'].
+            "&course=".$row['course']
           );
         }
         break;
       case 'delete':
-        $res = $con->query("UPDATE admins SET status=0 WHERE id='$id'");
-        if($res) header("refresh:0.3; ../adminManage.php");
+        $res = $con->query("DELETE FROM `subjects` WHERE id='$id'");
+        if($res) header("refresh:0.3; ../subjectManage.php");
         else {
           mysqli_error($con);
-          header("refresh:2; ../adminManage.php");
+          header("refresh:2; ../subjectManage.php");
+        }
+        break;
+    }
+  }
+  else if($role == 'section'){
+    switch($action){
+      case 'edit':
+        $res = $con->query("SELECT * FROM sections WHERE id='$id'");
+        $row = $res->fetch_assoc();
+        if($row){
+          header(
+            "location: ../sectionEdit.php?id=".$row['id'].
+            "&course=".$row['course'].
+            "&section=".$row['section']
+          );
+        }
+        break;
+      case 'delete':
+        $res = $con->query("DELETE FROM `sections` WHERE id='$id'");
+        if($res) header("refresh:0.3; ../sectionEdit.php");
+        else {
+          mysqli_error($con);
+          header("refresh:2; ../sectionEdit.php");
         }
         break;
     }
