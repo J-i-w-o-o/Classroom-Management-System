@@ -9,8 +9,8 @@
         <h1 class="text-center pt-2 mt-5 fw-bold fst-italic">Add Subject</h1>
         <div class="input-group mb-5 px-1 pt-3">
           <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
-          <input type="text" class="form-control" placeholder="Subject Name" aria-label="SchoolID" aria-describedby="basic-addon1" name="subject" required>
-          <input type="text" class="form-control" placeholder="Subject Code" aria-label="SchoolID" aria-describedby="basic-addon1" name="subjectCode" required>
+          <input type="text" class="form-control" placeholder="Subject Name" aria-label="Subject Name" aria-describedby="basic-addon1" name="subject" required>
+          <input type="text" class="form-control" placeholder="Subject Code" aria-label="Subject Code" aria-describedby="basic-addon1" name="subjectCode" required>
           <div class="input-group mt  -3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSection">course</label>
