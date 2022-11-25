@@ -1,4 +1,5 @@
-</div>
+            <!--main container end-->
+</div> <!--end of main wrapper-->
 <script type="text/javascript">
     $(document).ready(function() {
         
