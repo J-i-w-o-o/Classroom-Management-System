@@ -66,38 +66,39 @@
                   <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header mx-auto">
+
                           <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+
                         </div>
                         <div class="modal-body">
                         
-                        <div class="oldPassword">Old Password</div>
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fa fa-key text-dark" aria-hidden="true"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Input Old Password" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
+                        <form>
 
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fa fa-key text-dark" aria-hidden="true"></i>
-                            </span>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Old Password</label>
+                            <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Old Password">
+                            <div id="emailHelp" class="form-text"></div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Input New Password" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="New Password">
+                            <div id="emailHelp" class="form-text"></div>
+                          </div>
+                          <div class="mb-4">
+                            <label for="exampleInputEmail1" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm New Password">
+                            <div id="emailHelp" class="form-text"></div>
+                          </div>
+                          
+                          <div class="d-flex bd-highlight">
+                            <div class="me-auto p-2 bd-highlight"><button type="button" class="btn btn-danger me-auto p-2 bd-highlight fs-6" data-dismiss="modal">CLOSE</button></div>
+                            <div class="p-2 bd-highlight"><button type="submit" class="btn btn-success p-2 bd-highlight fs-6">CHANGE</button></div>
+                          </div>
 
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        </form>
+
+                          </div>
                       </div>
                     </div>
                   </div>
