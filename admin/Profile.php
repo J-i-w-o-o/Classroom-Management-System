@@ -4,14 +4,24 @@
 
   <link rel="stylesheet" href="../main-css/profile.css">
 
-  <!-- <?php
-    if (isset($_GET['error'])){ ?>
-    
-      <div class="alert alert-danger" role="alert">
-        
-    <?=$_GET['error']?>
-    </div>
-      <?php } ?>
+  <div class="x--main-container">
+    <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-4 bg-light pt-4 pb-5">
+      <?php
+      if (isset($_GET['error'])){ ?>
+      
+        <div class="alert alert-danger" role="alert">
+          
+       <?=$_GET['error']?>
+      </div>
+        <?php } ?>
+  <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <button type="submit" name="upload">Upload</button>
+    </form>
+      
 <div class="round">
 
 <form method="post" enctype="multipart/form-data">

@@ -6,12 +6,12 @@
             <div class="x--header">
 
                 <div class="x--header-menu">
-                    <div class="x--title"><span id="orange" class="text-orange">UCC</span>Classroom</div>
+                    <div class="x--title"><span id="orange" class="text-orange">UCC</span> Classroom</div>
                     <div class="x--sidebar-btn">
                         <i class="fas fa-bars"></i>
                     </div>
                     <ul>
-                        <li><a href="Profile.php"><i class="fas fa-user"></i></a></li>
+                        <li><a href="profile.php"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>
