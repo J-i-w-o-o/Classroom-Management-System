@@ -36,7 +36,7 @@
                   <td class="text-start  align-middle"><?php echo $row['school_id'] ?></td>
                   <td class="text-center  align-middle"><?php echo $row['last_name'] . ', ' . $row['first_name'] ?></td>
                   <td class="text-center  align-middle">
-                    <a href="admin_components/action.php?role=instructor&action=edit&id=<?php echo $row['id'] ?>">
+                    <a href="admin_components/action.php?role=instructor&action=edit&id=<?php echo $row['school_id'] ?>">
                     <button type="submit" class="btn btn-primary mx-1">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
@@ -45,8 +45,8 @@
                     
                     <!-- Button trigger modal -->
                     
-                    <a href="admin_components/action.php?role=instructor&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
-                      <button type="submit" class="btn btn-danger mx-1">Delete
+                    <a href="admin_components/action.php?role=instructor&action=delete&id=<?php echo $row['school_id'] ?>" class="text-white text-decoration-none">
+                      <button type="submit" class="btn btn-danger mx-1 ">Delete
                         <i class="fa fa-trash h5" aria-hidden="true"></i>
                       </button>
                     </a>

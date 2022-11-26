@@ -1,5 +1,5 @@
 <?php   
-if(isset($_POST['upload'])) {
+if(isset($_POST['uploadProfile'])) {
     $file = $_FILES['file'];
 
     $fileName = $_FILES['file']['name'];
@@ -7,6 +7,9 @@ if(isset($_POST['upload'])) {
     $fileSize = $_FILES['file']['size'];
     $fileError = $_FILES['file']['error'];
     $fileType = $_FILES['file']['type'];
+
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
 
     $fileExt = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExt));
@@ -41,7 +44,21 @@ if(isset($_POST['upload'])) {
                 move_uploaded_file($filetmpName,$fileDestination);
                 $sql = "UPDATE profileimg SET status=0 WHERE school_id='$school_id';";
                 $res = $con->query($sql);
-                header("Location: ../admin/profile.php");
+                
+                $sql = "UPDATE users SET email='$email', phone='$phone' WHERE school_id='$school_id';";
+                $con->query($sql);
+                $_SESSION['email'] = $email;
+                $_SESSION['phone'] = $phone;
+                if($role == 'admin'){
+                    header("Location: ../admin/profile.php");
+                }
+                elseif($role == 'student'){
+                    header("Location: ../student/profile.php");
+                }
+                elseif($role == 'instructor'){
+                    header("Location: ../instructor/profile.php");
+                }
+                
 
             }else {
                 header("Location: ../admin/profile.php?error= File Size Exceeded");
@@ -53,4 +70,3 @@ if(isset($_POST['upload'])) {
         header("Location: ../admin/profile.php?error= Error File Type!");
     }
 }
-?>

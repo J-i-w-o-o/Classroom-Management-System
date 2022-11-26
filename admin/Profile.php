@@ -1,121 +1,89 @@
 <?php
-  require('includes/Header.php');
+require('includes/Header.php');
 ?>
 
-  <link rel="stylesheet" href="../main-css/profile.css">
+<link rel="stylesheet" href="../main-css/profile.css">
 
-  <div class="x--main-container">
+<div class="x--main-container">
+  <?php
+  require './Modals/Add/EditProfileModal.php';
+  require './Modals/Add/ChangePasswordModal.php';
+  ?>
 
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col md-10 mt-5 pt-5">
-              <div class="row z-depth-3">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <?php
+      if (isset($_GET['error'])) { ?>
 
-                <div class="col-sm-4 bg-info rounded">
-                  <div class="card-block text-center text-white my-5">
-                    <i class="fa fa-user-circle fa-10x" aria-hidden="true"></i>
+        <div class="alert alert-danger d-inline p-2 text-center" role="alert">
+          <button type="button" class="btn-close btn-close-dark" data-dismiss="alert" aria-label="Close"></button>
+          <?= $_GET['error'] ?>
+        </div>
+      <?php } ?>
 
-                    <div class="pictureContainer">
-                      <?php
-                          if (isset($_GET['error'])){ ?>
-                          
-                            <div class="alert alert-danger" role="alert">
-                              
-                          <?=$_GET['error']?>
-                          </div>
-                            <?php } ?>
-                      <form method="post" enctype="multipart/form-data">
-                      <input type="file" name="file">
-                      <button type="submit" name="upload">Upload</button>
-                      </form>
-                    </div>
-
-                    <h2 class="font-weight-bold mt-4">John Doe</h2>
-                    <p>Administrator</p>
-                  </div>
-                </div>
-
-                <div class="col-sm-8 bg-white rounded">
-                  <h2 class="mt-5 text-center">Profile</h2>
-                  <hr class = "badge-primary mx-auto w-25">
-
-                  <div class="row text-center">
-                    <div class="col">
-                      <p class="font-weight-bold">School ID: </p>
-                      <h6 class="text-muted">2022113-M</h6>
-                    </div>
-                    <div class="col">
-                      <p class="font-weight-bold">Email: </p>
-                      <h6 class="text-muted">johndoe23@gmail.com</h6>
-                    </div>
-                    <div class="col">
-                      <p class="font-weight-bold">Contact Number: </p>
-                      <h6 class="text-muted">0989 234 5678</h6>
-                    </div>
-                  </div>  
-                  
-                  <!-- Button trigger modal -->
-                  <div class="changePassword text-center mt-5 pt-3">
-                    <button type="button" class="btn btn-success fs-5" data-toggle="modal" data-target="#changePassword">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                        <span class="changePasswordKey">Change Password</span>
-                    </button>
-                  </div>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                        
-                        <div class="oldPassword">Old Password</div>
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fa fa-key text-dark" aria-hidden="true"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Input Old Password" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fa fa-key text-dark" aria-hidden="true"></i>
-                            </span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Input New Password" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-
+      <div class="col md-10 mt-5 pt-5">
+        <div class="row z-depth-3">
+          <div class="col-sm-4 bg-dark bg-gradient">
+            <div class="card-block text-center text-white my-5">
+              <div class="pictureContainer">
+                <?php
+                $sqlImg = "SELECT * FROM profileimg WHERE school_id='$school_id'";
+                $resultImg = $con->query($sqlImg);
+                while ($rowImg = mysqli_fetch_assoc($resultImg)) {
+                  if ($rowImg['status'] == 0) {
+                    $filename = "../uploads/profile" . $school_id . "*";
+                    $fileinfo = glob($filename);
+                    $fileext = explode(".", $fileinfo[0]);
+                    $fileactualext = $fileext[3];
+                    echo "<img class='img-fluid rounded-circle mx-auto' src='../uploads/profile" . $school_id . ".$fileactualext?" . mt_rand() . "'>";
+                  } else {
+                    echo "<img class='img-fluid rounded-circle mx-auto' src='../uploads/profiledefault.jpg'>";
+                  }
+                }
+                ?>
+              </div>
+              <h2 class="font-weight-bold mt-4 "><?php echo $first_name . " " . $last_name; ?></h2>
+              <p class="text-uppercase fw-ligher"><?php echo $role ?></p>
             </div>
-          </div> 
+          </div>
+          <div class="col-sm-8 bg-white mx-auto rounded row d-flex justify-content-center">
+            <h2 class="mt-5 text-center">Profile
+              <hr class="badge-primary mx-auto w-25">
+            </h2>
+            <div class="row text-center">
+              <div class="col">
+                <h5 class="fw-bolder ">School ID: </h5>
+                <h6 class="text-muted"><?php echo $school_id ?></h6>
+              </div>
+              <div class="col">
+                <h5 class="fw-bolder">Email: </h5>
+                <h6 class="text-muted"><?php echo $email ?></h6>
+              </div>
+              <div class="col">
+                <h5 class="fw-bolder">Contact Number: </h5>
+                <h6 class="text-muted"><?php echo $phone ?></h6>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="editProfile text-center mt-5 pt-3">
+                <button type="button" class="btn btn-success fs-5 my-2" data-toggle="modal" data-target="#editProfile">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="editProfile  ">EDIT PROFILE</span>
+                </button>
+                <button type="button" class="btn btn-danger fs-5 my-2" data-toggle="modal" data-target="#changepassword">
+                  <i class="fa-solid fa-key"></i>
+                  <span class="editProfile  ">CHANGE PASSWORD</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
+    </div>
   </div>
+
+</div>
 
 <?php
 require('includes/Footer.php');
 ?>
-
-
-
-    
- 
