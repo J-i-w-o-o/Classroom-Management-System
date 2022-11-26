@@ -8,7 +8,7 @@
 }
 
 body {
-  background: url(../uploads/ucc-bg.jpg) no-repeat;
+  background: url(../uploads/ucc-bg.jpg) repeat-x;
   background-size: cover;
   height: 100vh; 
   overflow-x: hidden;
