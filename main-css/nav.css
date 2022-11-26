@@ -8,9 +8,12 @@
 }
 
 body {
-  background: url(../uploads/ucc-bg.jpg) repeat-x;
+  background: url(../uploads/ucc-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh; 
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -116,7 +119,6 @@ body {
   transition: 1s;
   transition-property: width;
   overflow-y: hidden;
-  
 }
 
 /*  */
@@ -142,12 +144,12 @@ body {
   display: block;
 }
 
-.x--wrapper .x--sidebar .x--sidebar-menu .x--item{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item {
   width: 250px;
   overflow: hidden;
 }
 
-.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn{
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--menu-btn {
   display: block;
 }
 .x--wrapper .x--sidebar a span {
@@ -204,7 +206,7 @@ body {
   font-size: 18px;
   padding-left: 3px;
 }
-.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu  {
+.x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu {
   font-size: 18px;
   padding-left: 3px;
   background: #3498db;
@@ -212,7 +214,6 @@ body {
   max-height: 0;
   transition-property: background, max-height;
 }
-
 
 .x--wrapper.x--collapse .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a {
   display: block;
@@ -238,7 +239,7 @@ body {
 }
 
 .x--wrapper .x--sidebar .x--sidebar-menu .x--item .x--sub-menu a:hover {
-  background: #ff7100;  
+  background: #ff7100;
 }
 
 .x--wrapper
@@ -274,18 +275,17 @@ body {
 }
 .x--main-container {
   animation: transitionIn 0.75s;
- }
- @keyframes transitionIn {
+}
+@keyframes transitionIn {
   from {
     opacity: 0;
     transform: rotateX(-10deg);
   }
-  to{
+  to {
     opacity: 1;
     transform: rotateX(0);
   }
-  
- }
+}
 
 .x--wrapper .x--main-container .x--card {
   background: #fbf3ff;
