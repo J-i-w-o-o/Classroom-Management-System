@@ -25,7 +25,7 @@ require('includes/Header.php');
         <div class="row z-depth-3">
           <div class="col-sm-4 bg-dark bg-gradient">
             <div class="card-block text-center text-white my-5">
-              <div class="pictureContainer">
+              <div class="my-5 mx-5 pictureContainer">
                 <?php
                 $sqlImg = "SELECT * FROM profileimg WHERE school_id='$school_id'";
                 $resultImg = $con->query($sqlImg);
@@ -35,7 +35,7 @@ require('includes/Header.php');
                     $fileinfo = glob($filename);
                     $fileext = explode(".", $fileinfo[0]);
                     $fileactualext = $fileext[3];
-                    echo "<img class='img-fluid rounded-circle mx-auto' src='../uploads/profile" . $school_id . ".$fileactualext?" . mt_rand() . "'>";
+                    echo "<img class='img-fluid rounded-circle' src='../uploads/profile" . $school_id . ".$fileactualext?" . mt_rand() . "'>";
                   } else {
                     echo "<img class='img-fluid rounded-circle mx-auto' src='../uploads/profiledefault.jpg'>";
                   }

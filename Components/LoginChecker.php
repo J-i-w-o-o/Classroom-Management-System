@@ -1,5 +1,6 @@
 <?php
   if (isset($_POST['submit'])) {
+    $school_id = $_POST['schoolID'];
     $password = $_POST['password'];
 
     $res = $con->query("SELECT password FROM users WHERE school_id='$school_id'");

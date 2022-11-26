@@ -5,6 +5,7 @@ require('../Components/Database.php');
 
 if (isset($_SESSION['user'])) {
     if ($_SESSION['role'] == 'admin') {
+        
     } else if ($_SESSION['role'] == 'student') {
         header('Location: \Classroom-Management-System\student\dashboard.php');
         die;
