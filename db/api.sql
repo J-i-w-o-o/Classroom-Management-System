@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2022 at 08:52 PM
+-- Generation Time: Nov 26, 2022 at 11:16 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -40,7 +40,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `school_id`, `first_name`, `last_name`, `status`) VALUES
-(10, 'admin01', 'Patrick', 'Garcia', 1);
+(19, 'admin01', 'Patrick', 'Garcia', 1);
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE `instructors` (
 --
 
 INSERT INTO `instructors` (`id`, `school_id`, `first_name`, `last_name`, `status`) VALUES
-(3, 'Instructor1', 'Miku', 'Miku', 1);
+(4, 'Instructor1', 'Miku', 'Miku', 1);
 
 -- --------------------------------------------------------
 
@@ -80,29 +80,8 @@ CREATE TABLE `profileimg` (
 --
 
 INSERT INTO `profileimg` (`id`, `school_id`, `status`) VALUES
-(35, '20201138-M', 0),
-(51, 'admin03', 0),
-(52, 'test', 1),
-(53, 'admin07', 0),
-(54, 'Instructor1-M', 1),
-(55, 'Instructor2-M', 1),
-(56, 'admin01', 0),
-(57, '20201138-M', 1),
-(58, '20201132-M', 1),
-(59, '20201132-M', 1),
-(60, '20201132-M', 1),
-(61, '20201132-M', 1),
-(62, '20201132-M', 1),
-(63, '20201132-M', 1),
-(64, '20201132-M', 1),
-(65, '20201132-M', 1),
-(66, '20201132-M', 1),
-(67, '20201132-M', 1),
-(68, '20201138-M', 1),
-(69, '20201138-M', 1),
-(70, 'Instructor1', 1),
-(71, '20201138-M', 1),
-(72, '20201132-M', 1);
+(82, 'admin01', 0),
+(83, 'Instructor1', 1);
 
 -- --------------------------------------------------------
 
@@ -164,7 +143,8 @@ CREATE TABLE `subjects` (
 --
 
 INSERT INTO `subjects` (`id`, `subject`, `subject_code`, `course`) VALUES
-(19, 'INTERMEDIATE PROGRAMMING', 'CCS 103', 'BSCS');
+(19, 'INTERMEDIATE PROGRAMMING', 'CCS 103', 'BSCS'),
+(21, 'Ethics', 'GEC 008', 'BSCS');
 
 -- --------------------------------------------------------
 
@@ -179,19 +159,21 @@ CREATE TABLE `users` (
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(20) NOT NULL
+  `role` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `uid`, `school_id`, `first_name`, `last_name`, `password`, `role`) VALUES
-(1, '', 'admin', 'admin', 'admin', '$2y$10$Z5/0HjMi/N23utTk6Zl0y.Q903eURA5oaFTJPOTlDhwPKjfkn7Zfi', 'admin'),
-(59, '', 'admin01', 'Patrick', 'Garcia', '$2y$10$hnEOvbgpIDnKLlqaGBdRguJ4KxifOXHSpgok5IuSrlqZzryAsT3Fq', 'admin'),
-(66, '', 'Instructor1', 'Miku', 'Miku', '$2y$10$2jCHA13rGtSUGLHGjPcNve.tJCE4zO3WzUB9ifb4FzLuFM5Ndwdmm', 'instructor'),
-(67, '', '20201138-M', 'Andriel', 'Gabriel', '$2y$10$ONsKlWKpBNJs.C5qVW.u5Op4E8nqO/jy.7.t2PWEPMIit/DlN7LgG', 'student'),
-(68, '', '20201132-M', 'Jiwoo', 'Jiwoo', '$2y$10$D1G8D2FrUacMh4U7s988auD6pjNNzMdUHlLYEAFYV0MI2FcSLq8qO', 'student');
+INSERT INTO `users` (`id`, `uid`, `school_id`, `first_name`, `last_name`, `password`, `role`, `email`, `phone`) VALUES
+(1, '', 'admin', 'admin', 'admin', '$2y$10$Z5/0HjMi/N23utTk6Zl0y.Q903eURA5oaFTJPOTlDhwPKjfkn7Zfi', 'admin', '', '0'),
+(67, '', '20201138-M', 'Andriel', 'Gabriel', '$2y$10$ONsKlWKpBNJs.C5qVW.u5Op4E8nqO/jy.7.t2PWEPMIit/DlN7LgG', 'student', '', '0'),
+(68, '', '20201132-M', 'Jiwoo', 'Jiwoo', '$2y$10$D1G8D2FrUacMh4U7s988auD6pjNNzMdUHlLYEAFYV0MI2FcSLq8qO', 'student', '', '0'),
+(78, '', 'admin01', 'Patrick', 'Garcia', '$2y$10$ZCu16taHuLOBjui//PVxsOJdLs9CROy4X/vc2a7kl3oGaudQhe2J2', 'admin', 'patrickrenzgarcia@gmail.com', '09159224518'),
+(79, '', 'Instructor1', 'Miku', 'Miku', '$2y$10$7V6K1aixX01AzX3lZ25WR.H11MmlHLZs8l3sg6UTUE1w4qtP5wQ/a', 'instructor', '', '');
 
 --
 -- Indexes for dumped tables
@@ -247,25 +229,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `instructors`
 --
 ALTER TABLE `instructors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `profileimg`
 --
 ALTER TABLE `profileimg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -277,13 +259,13 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
