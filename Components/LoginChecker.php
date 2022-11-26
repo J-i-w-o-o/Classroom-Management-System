@@ -1,6 +1,5 @@
 <?php
   if (isset($_POST['submit'])) {
-    $school_id = $_POST['schoolID'];
     $password = $_POST['password'];
 
     $res = $con->query("SELECT password FROM users WHERE school_id='$school_id'");
@@ -16,12 +15,15 @@
       $_SESSION['first_name'] = $row['first_name'];
       $_SESSION['last_name'] = $row['last_name'];
       $_SESSION['role'] = $row['role'];
+      $_SESSION['email'] = $row['email'];
+      $_SESSION['phone'] = $row['phone'];
+      
 
       if($row['role']=='admin'){
         header("Location: ./admin/dashboard.php");
       }
       else if($row['role']=='student'){
-        header("Location: ./user/dashboard.php");
+        header("Location: ./student/dashboard.php");
       }
       else if($row['role']=='instructor'){
         header("Location: ./instructor/dashboard.php");
