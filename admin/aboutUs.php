@@ -8,23 +8,10 @@ if (isset($_SESSION['user'])) {
 ?>
 
 <div class="x--main-container">
+<div class="container py-5"> 
 
-
-  <!-- <div class="d-flex flex-column pt-4 px-5">
-    <div class="p-4 text-center bg-light fs-1 rounded-top">About Us</div>
-    <div class="p-0 bg-light d-flex justify-content-evenly fs-4 align-items-center">
-      <span class="align-items-center px-5">UCC Classroom was created to relieve students' academic burdens by providing a centralized platform for monitoring their tasks and tracking their class progress in a transparent manner by displaying rubrics alongside student work. Set and schedule activities, assignments, and quizzes across multiple classes.
-      </span>
-      <img src="../img/teacher.png" class="img-fluid mx-5" alt="Responsive image" width="270">
-    </div>
-    <div class="p-3 bg-light d-flex justify-content-evenly fs-4 align-items-center rounded-bottom">
-      <img src="../img/student.png" class="img-fluid mx-5" width="250">
-      <span class="align-items-center px-5">UCC Classroom was created to relieve students' academic burdens by providing a centralized platform for monitoring their tasks and tracking their class progress in a transparent manner by displaying rubrics alongside student work. Set and schedule activities, assignments, and quizzes across multiple classes.
-      </span>
-    </div>
-  </div> -->
-<!-- 
-<div class="bg-light">
+<div class="bg-light rounded border border-warning">
+  <div class="container py-3">
     <div class="row h-100 align-items-center py-5">
       <div class="col-lg-6">
         <h1 class="display-4">About us page</h1>
@@ -35,9 +22,9 @@ if (isset($_SESSION['user'])) {
       </div>
       <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
     </div>
-</div>
+  </div>
 
-<div class="bg-white py-5">
+
   <div class="container py-5">
     <div class="row align-items-center mb-5">
       <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
@@ -54,9 +41,7 @@ if (isset($_SESSION['user'])) {
       </div>
     </div>
   </div>
-</div>
 
-<div class="bg-light py-5">
   <div class="container py-5">
     <div class="row mb-4">
       <div class="col-lg-5">
@@ -120,20 +105,14 @@ if (isset($_SESSION['user'])) {
           </ul>
         </div>
       </div>
+      </div>
       <!-- End-->
 
-  </div>
+    </div>
 </div>
 
-
-<footer class="bg-light pb-5">
-  <div class="container text-center">
-    <p class="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
-  </div> -->
-</footer>
-
-
   </div>  
+  </div>
 </div>
 
 <?php

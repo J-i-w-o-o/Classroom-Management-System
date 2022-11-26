@@ -25,14 +25,14 @@ require('../Components/upload.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../main-css/main.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/e630d1fe84.js" crossorigin="anonymous"></script>
     <script src="jquery.bootstrap-growl.min.js" crossorigin="anonymous"></script>
     
     <!-- local bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <script src="../js/bootstrap.min.js"></script>
 
     <!-- jQuery, Bootstrap for modals -->
@@ -50,8 +50,9 @@ require('../Components/upload.php');
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
     <!-- custom/vanilla css -->
-    <link rel="stylesheet" href="../main-css/userManage.css">
-    <link rel="stylesheet" href="../main-css/aboutUs.css">
+    <link rel="stylesheet" href="../main-css/userManage.css"/>
+    <link rel="stylesheet" href="../main-css/aboutUs.css"/>
+    <link rel="stylesheet" href="../main-css/nav.css"/>
     
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
