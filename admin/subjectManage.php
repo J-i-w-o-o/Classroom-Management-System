@@ -9,10 +9,10 @@
     <?php 
       require './Modals/Add/AddSubjectModal.php';// Add Student Modal Pop-up
     ?>
-  <div class="container pt-4 "> 
-    <div class="container-lg p-2 bg-white rounded">
-    <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#subjectModal">
-      Add Subject
+  <div class="container pt-4 text-end"> 
+    <div class="container-lg p-4 bg-white rounded">
+    <button type="button" class="btn btn-success d-self text-end mb-3 fs-6" data-toggle="modal" data-target="#subjectModal">
+      <i class="fa-solid fa-plus"></i> Add Subject
     </button>
     <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>

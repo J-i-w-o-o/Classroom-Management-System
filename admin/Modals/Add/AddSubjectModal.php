@@ -3,23 +3,24 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      <form method="post" class="bg-light border border-primary rounded px-5">
+      <form method="post" class="bg-light border border-primary rounded p-5">
 
         <!-- ADD Subject MODAL -->
-        <h1 class="text-center pt-2 mt-5 fw-bold fst-italic">Add Subject</h1>
-        <div class="input-group mb-5 px-1 pt-3">
-        <span class="input-group-text">Subject</span>
-          <input type="text" class="form-control" placeholder="Subject Name" aria-label="Subject Name" aria-describedby="basic-addon1" name="subject" required>
-          </div>
-          <div class="input-group mb-5 px-1">
+        <h1 class="text-center fw-bold mb-5">Add Subject</h1>
+
+        <div class="input-group mb-4">
           <span class="input-group-text">Subject Code</span>
           <input type="text" class="form-control" placeholder="Subject Code" aria-label="Subject Code" aria-describedby="basic-addon1" name="subjectCode" required>
           </div>
 
+        <div class="input-group mb-4">
+        <span class="input-group-text">Subject</span>
+          <input type="text" class="form-control" placeholder="Subject Name" aria-label="Subject Name" aria-describedby="basic-addon1" name="subject" required>
+          </div>
 
-          <div class="input-group mt  -3">
+          <div class="input-group mb-5">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSection">course</label>
+            <label class="input-group-text" for="inputGroupSection">Course</label>
           </div>
           <select name="course" id="inputGroupSection" class="custom-select">
             <?php
@@ -38,9 +39,9 @@
           </select>
         </div>
 
-        <div class="d-flex justify-content-evenly py-2 mb-4">
-          <input type="submit" class="btn btn-success btn-lg mx-2" name="addingSubjectSubmit" value="Add Subject"></input>
-          <input type="reset" class="btn btn-danger btn-lg mx-2" value="Clear"></input>
+        <div class="d-flex justify-content-around mt-4">
+          <input type="submit" class="btn btn-success btn-lg" name="addingSubjectSubmit" value="Add"></input>
+          <input type="reset" class="btn btn-danger btn-lg" value="Clear"></input>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
 

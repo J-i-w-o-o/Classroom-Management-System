@@ -12,7 +12,8 @@
   <div class="container pt-4 text-end"> 
     <div class="container-lg p-4 bg-white rounded">
     <button type="button" class="btn btn-success d-self text-end mb-3 fs-6" data-toggle="modal" data-target="#studentModal">
-    <i class="fa-sharp fa-solid fa-user-plus"></i> Add Student</button>
+      <i class="fa-sharp fa-solid fa-user-plus"></i> Add Student
+    </button>
       <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>
           <tr>
