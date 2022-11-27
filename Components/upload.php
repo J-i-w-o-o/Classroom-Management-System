@@ -67,6 +67,6 @@ if(isset($_POST['uploadProfile'])) {
            header("Location: ../admin/profile.php?error= Error Uploading File!");
         }
     } else {
-        header("Location: ../admin/profile.php?error= Error File Type!");
+
     }
 }

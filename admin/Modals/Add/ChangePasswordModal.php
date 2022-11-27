@@ -78,6 +78,7 @@
                <div class="alert alert-Successs text-center mx-5" role="alert">Password Updated!
                    <button type="button" class="btn-close btn-close-white d-flex justify-content-center" data-dismiss="alert" aria-label="Close"></button>
                </div>
+               
            <?php
             } else {
             ?>
