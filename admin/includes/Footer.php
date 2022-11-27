@@ -31,12 +31,17 @@
                         return false;
                     return true;
                 }
+                const toggleBtn =document.querySelector('toggleShow');
+                const showDiv =document.querySelector('.alertShow');
 
-                function check() {
-                    return $('.alert').alert();
-                    element = document.getElementById('toggleshow');
-                    element.style.display = "";
-                }
+                toggleBtn.addEventListener('click', () => {
+                    if(showDiv.style.display === 'none'){
+                        showDiv.stle.display = 'block';
+                    }else{
+                        showDiv.style.display = 'none';
+                    }
+                });
+
             </script>
             </body>
 

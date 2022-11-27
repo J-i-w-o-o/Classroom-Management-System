@@ -84,18 +84,16 @@
                     <li class="x--item">
                         <?php
 
-                        if (empty($email) || empty($phone)){
-                            
+                        if (empty($email) || empty($phone)) {
+                            $toggle = 'visible';
                         ?>
-                            <a href="Profile.php" class="x--menu-btn" onclick="return check()">
-                            
+                            <a href="Profile.php" class="x--menu-btn">
                             <?php
-                             
-
-                        } else { ?>
+                        } else {
+                            $toggle = 'hidden';
+                            ?>
                                 <a href="../Components/logout.php" class="x--menu-btn">
                                 <?php
-
                             } ?>
                                 <i class="fas fa-power-off"></i><span>Logout</span>
                                 </a>
