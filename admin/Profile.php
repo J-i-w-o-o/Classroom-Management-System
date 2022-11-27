@@ -12,7 +12,7 @@ require('includes/Header.php');
 
   <div class="container">
     <div class="row d-flex justify-content-center">
-    <div class="alert alert-warning" style="visibility: invisible ;" role="alert" id="toggleshow">
+    <div class="alert alert-warning" style="visibility: <?php echo $toggle ?> ;" role="alert" id="toggleshow">
         Please Input Email / Phone Number Before Logging out! Go to <a style="text-decoration: none;border-bottom: 1px solid;" href="" data-toggle="modal" data-target="#editProfile" class="alert-link"><u>Edit profile</u>
         <button type="button" hidden class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>

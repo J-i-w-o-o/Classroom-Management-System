@@ -23,9 +23,9 @@
                     </div>
                     <!-- SECTION IS DROP DOWN -->
                     <div class="input-group mb-3">
-                        <input type="file" name="file">
+                    <label for="formFile" class="form-label px-2"><span class="input-group-text"> Profile Picture</span></label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="file" value="#black">
                     </div>
-
 
                     <div class="d-flex justify-content-center py-2 mb-4">
                         <input type="submit" name="uploadProfile" class="btn btn-primary btn-lg mx-2" value="Edit"></input>
