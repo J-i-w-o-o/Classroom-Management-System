@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                 </button>
             </div>
-            <div class="modal-body pb-4">
+            <div class="modal-body pb-3">
 
                 <form method="post" class="bg-light border border-primary rounded px-5" enctype="multipart/form-data">
                     <!-- ADD STUDENT MODAL -->
