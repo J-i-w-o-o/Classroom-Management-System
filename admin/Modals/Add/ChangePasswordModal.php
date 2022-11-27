@@ -3,7 +3,7 @@
        <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
                <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
+                   <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                    </button>
                </div>
@@ -25,7 +25,7 @@
                        <?php  }
                         ?>
                        <!-- ADD STUDENT MODAL -->
-                       <h1 class="text-center pt-3 fw-bold fst-italic">Edit Profile</h1>
+                       <h1 class="text-center pt-3 fw-bold fst-italic">Change Password</h1>
 
                        <div class="input-group mb-5 px-1">
                            <span class="input-group-text">Old Password</span>

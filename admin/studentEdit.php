@@ -62,7 +62,7 @@ if (!$id || !$school_id || !$first_name || !$last_name || !$section)
 
 
             <div class="d-flex justify-content-center py-2 mb-4">
-              <input type="submit" name="submitEdit" class="btn btn-primary btn-lg mx-2" value="Edit"></input>
+              <input type="submit" name="submitEdit" class="btn btn-success btn-lg mx-2" value="Save"></input>
               <a href="studentManage.php"><input type="button" class="btn btn-danger btn-lg mx-2" value="Close"></input></a>
             </div>
 
