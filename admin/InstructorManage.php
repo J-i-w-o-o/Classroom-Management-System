@@ -9,10 +9,10 @@
     <?php 
       require './Modals/Add/AddInstructorModal.php';// Add Student Modal Pop-up
     ?>
-  <div class="container pt-4 "> 
-    <div class="container-lg p-2 bg-white rounded">
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#instructorModal">
-      Add Teacher
+  <div class="container pt-4 text-end"> 
+    <div class="container-lg p-4 bg-white rounded">
+    <button type="button" class="btn btn-success d-self justify-content-end text-end mb-3 fs-6" data-toggle="modal" data-target="#instructorModal">
+    <i class="fa-sharp fa-solid fa-user-plus"></i> Add Instructor
     </button>
     <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>

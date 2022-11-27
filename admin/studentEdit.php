@@ -18,30 +18,32 @@ if (!$id || !$school_id || !$first_name || !$last_name || !$section)
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
 
-          <form method="post" class="bg-light border border-primary rounded px-5 ">
+          <form method="post" class="bg-light border border-primary rounded p-5 ">
+            
             <!-- ADD STUDENT MODAL -->
-            <h1 class="text-center pt-3 fw-bold fst-italic">Edit Student</h1>
-            <div class="input-group mb-5 px-1">
+            <h1 class="text-center fw-bold mb-5">Edit Student</h1>
+
+            <div class="input-group mb-4">
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
               <input value="<?php echo $school_id ?>" type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1" name="school_id" required>
             </div>
 
-            <div class="input-group mb-5 px-1">
+            <div class="input-group mb-4">
               <span class="input-group-text">First Name</span>
               <input value="<?php echo $first_name ?>" type="text" aria-label="Firstname" placeholder="First Name" class="form-control" name="first_name" required>
 
             </div>
-            <div class="input-group mb-5 px-1">
+            <div class="input-group mb-4">
               <span class="input-group-text">Last Name</span>
               <input value="<?php echo $last_name ?>" type="text" aria-label="Lastname" placeholder="Last Name" class="form-control" name="last_name" required>
 
             </div>
 
             <!-- SECTION IS DROP DOWN -->
-            <div class="input-group mb-3">
+            <div class="input-group mb-5">
 
               <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSection">Section</label>
+                <label class="input-group-text" for="inputGroupSection">Course & Section</label>
               </div>
               <select name="section" id="inputGroupSection" class="custom-select">
                 <?php
@@ -61,9 +63,9 @@ if (!$id || !$school_id || !$first_name || !$last_name || !$section)
             </div>
 
 
-            <div class="d-flex justify-content-center py-2 mb-4">
-              <input type="submit" name="submitEdit" class="btn btn-success btn-lg mx-2" value="Save"></input>
-              <a href="studentManage.php"><input type="button" class="btn btn-danger btn-lg mx-2" value="Close"></input></a>
+            <div class="d-flex justify-content-around mt-4">
+              <input type="submit" name="submitEdit" class="btn btn-success btn-lg" value="Save"></input>
+              <a href="studentManage.php"><input type="button" class="btn btn-danger btn-lg" value="Close"></input></a>
             </div>
 
           </form>
