@@ -7,12 +7,12 @@
 
     <!-- modal imports -->
     <?php 
-      require './Modals/Add/AddAdminModal.php';// Add Student Modal Pop-up
+      require './Modals/Add/AddAdminModal.php';// Add Admin Modal Pop-up
     ?>
-  <div class="container pt-4 "> 
-    <div class="container-lg p-2 bg-white rounded">
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adminModal">
-      Add Admin
+  <div class="container pt-4 text-end"> 
+    <div class="container-lg p-4 bg-white rounded">
+    <button type="button" class="btn btn-success d-self text-end mb-3 fs-6" data-toggle="modal" data-target="#adminModal">
+    <i class="fa-solid fa-person-circle-plus"></i> Add Admin
     </button>
     <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>

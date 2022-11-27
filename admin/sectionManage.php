@@ -7,12 +7,12 @@
 
     <!-- modal imports -->
     <?php 
-      require './Modals/Add/AddSectionModal.php';// Add Student Modal Pop-up
+      require './Modals/Add/AddSectionModal.php';// Add Section Modal Pop-up
     ?>
-  <div class="container pt-4 "> 
-    <div class="container-lg p-2 bg-white rounded">
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#sectionModal">
-      Add Section
+  <div class="container pt-4 text-end"> 
+    <div class="container-lg p-4 bg-white rounded">
+    <button type="button" class="btn btn-success d-self text-end mb-3 fs-6" data-toggle="modal" data-target="#sectionModal">
+    <i class="fa-solid fa-plus"></i> Add Section
     </button>
       <table id="tableView" class="display responsive  compact table table-striped" width="100%">
         <thead>
