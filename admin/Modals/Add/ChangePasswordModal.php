@@ -9,7 +9,6 @@
                </div>
                <div class="modal-body pb-4">
                    <form method="post" class="bg-light border border-primary rounded px-5">
-
                        <!-- ADD STUDENT MODAL -->
                        <h1 class="text-center pt-3 fw-bold fst-italic">Edit Profile</h1>
 
