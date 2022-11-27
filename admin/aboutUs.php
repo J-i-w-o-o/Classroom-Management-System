@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
 <div class="x--main-container">
   <div class="container py-5"> 
 
-    <div class="bg-light rounded border border-dark">
+    <div class="bg-light rounded border border-primary">
 
       <div class="container py-3">
         <div class="row h-100 align-items-center py-5 mx-3">
