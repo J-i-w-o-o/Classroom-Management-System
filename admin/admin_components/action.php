@@ -2,12 +2,12 @@
   include '../../Components/Database.php';
   $role = isset($_GET['role']) ? $_GET['role'] : null;
   $action = isset($_GET['action']) ? $_GET['action'] : null;
-  $id = isset($_GET['id']) ? $_GET['id'] : null;
+  $schoolid = isset($_GET['id']) ? $_GET['id'] : null;
 
   if($role == 'student'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM students WHERE id='$id'");
+        $res = $con->query("SELECT * FROM students WHERE school_id='$schoolid'");
         $row = $res->fetch_assoc();
         if($row){
           header(
@@ -20,7 +20,9 @@
         }
         break;
       case 'delete':
-        $res = $con->query("UPDATE students SET status=0 WHERE id='$id'");
+        $res = $con->query("DELETE FROM `students` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `users` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `profileimg` WHERE school_id='$schoolid'");
         if($res) header("refresh:0.3; ../studentManage.php");
         else {
           mysqli_error($con);
@@ -32,7 +34,7 @@
   else if($role == 'instructor'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM instructors WHERE id='$id'");
+        $res = $con->query("SELECT * FROM instructors WHERE school_id='$schoolid'");
         $row = $res->fetch_assoc();
         if($row){
           header(
@@ -44,7 +46,9 @@
         }
         break;
       case 'delete':
-        $res = $con->query("UPDATE instructors SET status=0 WHERE id='$id'");
+        $res = $con->query("DELETE FROM `instructors` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `users` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `profileimg` WHERE school_id='$schoolid'");
         if($res) header("refresh:0.3; ../instructorManage.php");
         else {
           mysqli_error($con);
@@ -56,7 +60,7 @@
   else if($role == 'admin'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM admins WHERE id='$id'");
+        $res = $con->query("SELECT * FROM admins WHERE school_id='$schoolid'");
         $row = $res->fetch_assoc();
         if($row){
           header(
@@ -68,7 +72,9 @@
         }
         break;
       case 'delete':
-        $res = $con->query("UPDATE admins SET status=0 WHERE id='$id'");
+        $res = $con->query("DELETE FROM `admins` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `users` WHERE school_id='$schoolid'");
+        $res = $con->query("DELETE FROM `profileimg` WHERE school_id='$schoolid'");
         if($res) header("refresh:0.3; ../adminManage.php");
         else {
           mysqli_error($con);
