@@ -13,7 +13,6 @@ require('./Components/LoginChecker.php') ?>
 </head>
 
 <body>
-  <img src="uploads/ucc-bg.jpg" class="img-fluid">   
   <div class="center">
     <h1 class="h1">LOGIN</h1>
     <form method="post">

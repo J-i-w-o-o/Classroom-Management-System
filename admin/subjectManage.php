@@ -37,7 +37,7 @@
                   <td class="text-center  align-middle"><?php echo $row['subject_code'] ?></td>
                   <td class="text-center  align-middle"><?php echo $row['course'] ?></td>
                   <td class="text-center  align-middle">
-                    <a href="admin_components/action.php?role=subject&action=edit&id=<?php echo $row['id'] ?>">
+                    <a href="admin_components/action.php?role=subject&action=edit&id1=<?php echo $row['id'] ?>">
                     <button type="submit" class="btn btn-primary mx-1">
                         Edit
                         <i class="fa-solid fa-pen-to-square h5"></i>
@@ -46,7 +46,7 @@
                     
                     <!-- Button trigger modal -->
                     
-                    <a href="admin_components/action.php?role=subject&action=delete&id=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
+                    <a href="admin_components/action.php?role=subject&action=delete&id1=<?php echo $row['id'] ?>" class="text-white text-decoration-none">
                       <button type="submit" class="btn btn-danger mx-1">Delete
                         <i class="fa fa-trash h5" aria-hidden="true"></i>
                       </button>
