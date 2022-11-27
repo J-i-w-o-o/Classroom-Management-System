@@ -3,6 +3,7 @@
   $role = isset($_GET['role']) ? $_GET['role'] : null;
   $action = isset($_GET['action']) ? $_GET['action'] : null;
   $schoolid = isset($_GET['id']) ? $_GET['id'] : null;
+  $id1 = isset($_GET['id1']) ? $_GET['id1'] : null;
 
   if($role == 'student'){
     switch($action){
@@ -86,7 +87,7 @@
   else if($role == 'subject'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM subjects WHERE id='$id'");
+        $res = $con->query("SELECT * FROM subjects WHERE id='$id1'");
         $row = $res->fetch_assoc();
         if($row){
           header(
@@ -98,7 +99,7 @@
         }
         break;
       case 'delete':
-        $res = $con->query("DELETE FROM `subjects` WHERE id='$id'");
+        $res = $con->query("DELETE FROM `subjects` WHERE id='$id1'");
         if($res) header("refresh:0.3; ../subjectManage.php");
         else {
           mysqli_error($con);
@@ -110,7 +111,7 @@
   else if($role == 'section'){
     switch($action){
       case 'edit':
-        $res = $con->query("SELECT * FROM sections WHERE id='$id'");
+        $res = $con->query("SELECT * FROM sections WHERE id='$id1'");
         $row = $res->fetch_assoc();
         if($row){
           header(
@@ -121,7 +122,7 @@
         }
         break;
       case 'delete':
-        $res = $con->query("DELETE FROM `sections` WHERE id='$id'");
+        $res = $con->query("DELETE FROM `sections` WHERE id='$id1'");
         if($res) header("refresh:0.3; ../sectionEdit.php");
         else {
           mysqli_error($con);
