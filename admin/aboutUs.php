@@ -79,7 +79,7 @@ if (isset($_SESSION['user'])) {
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="../img/AndrielGabriel.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Andriel Gabriel</h5><span class="small text-uppercase text-muted">Lead Developer | UX Designer</span>
+          <h5 class="mb-0">Andriel Gabriel</h5><span class="small text-uppercase text-muted">Lead Developer | UX/UI Designer</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="https://www.facebook.com/Gravitationall.pull" target="_blank" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
             <li class="list-inline-item"><a href="https://twitter.com/Jiwooo_Gabriel" target="_blank" class="social-link"><i class="fa fa-twitter"></i></a></li>

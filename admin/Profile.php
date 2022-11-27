@@ -22,10 +22,9 @@ require('includes/Header.php');
 
 
 
-      <div class="col md-10 mt-5 pt-5">
+      <div class="col md-10 mt-5">
         <div class="row z-depth-3">
           <div class="col-sm-4 bg-dark bg-gradient rounded">
-            
       <?php
       if (isset($_GET['error'])) { ?>
 
