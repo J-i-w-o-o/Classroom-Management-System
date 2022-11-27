@@ -3,29 +3,14 @@
        <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
                <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+                   <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                    </button>
                </div>
                <div class="modal-body pb-4">
                    <form method="post" class="bg-light border border-primary rounded px-5">
-                       <?php
-                        if (isset($_GET['error'])) { ?>
-
-                           <div class="alert alert-danger" role="alert">
-
-                               <?= $_GET['error'] ?>
-                           </div>
-                       <?php } elseif (isset($_GET['success'])) { ?>
-                           <div class="alert alert-success" role="alert">
-
-                               <?= $_GET['success'] ?>
-                           </div>
-
-                       <?php  }
-                        ?>
                        <!-- ADD STUDENT MODAL -->
-                       <h1 class="text-center pt-3 fw-bold fst-italic">Change Password</h1>
+                       <h1 class="text-center pt-3 fw-bold fst-italic">Edit Profile</h1>
 
                        <div class="input-group mb-5 px-1">
                            <span class="input-group-text">Old Password</span>
@@ -76,21 +61,18 @@
                 $res3 = $con->query("UPDATE users SET password='$hashedpassword' WHERE school_id='$school_id'");
     ?>
                <div class="alert alert-Successs text-center mx-5" role="alert">Password Updated!
-                   <button type="button" class="btn-close btn-close-white d-flex justify-content-center" data-dismiss="alert" aria-label="Close"></button>
                </div>
                
            <?php
             } else {
             ?>
                <div class="alert alert-danger text-center mx-5" role="alert">Old Password Incorrect!
-                   <button type="button" class="btn-close btn-close-white d-flex justify-content-center" data-dismiss="alert" aria-label="Close"></button>
                </div>
            <?php
             }
         } else {
             ?>
            <div class="alert alert-danger text-center mx-5" role="alert">New Password Mismatch!
-               <button type="button" class="btn-close btn-close-white d-flex justify-content-center" data-dismiss="alert" aria-label="Close"></button>
            </div>
    <?php
         }

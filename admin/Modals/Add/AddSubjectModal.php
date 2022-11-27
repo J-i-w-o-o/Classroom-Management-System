@@ -8,9 +8,15 @@
         <!-- ADD Subject MODAL -->
         <h1 class="text-center pt-2 mt-5 fw-bold fst-italic">Add Subject</h1>
         <div class="input-group mb-5 px-1 pt-3">
-          <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+        <span class="input-group-text">Subject</span>
           <input type="text" class="form-control" placeholder="Subject Name" aria-label="Subject Name" aria-describedby="basic-addon1" name="subject" required>
+          </div>
+          <div class="input-group mb-5 px-1">
+          <span class="input-group-text">Subject Code</span>
           <input type="text" class="form-control" placeholder="Subject Code" aria-label="Subject Code" aria-describedby="basic-addon1" name="subjectCode" required>
+          </div>
+
+
           <div class="input-group mt  -3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSection">course</label>
@@ -30,7 +36,6 @@
             }
             ?>
           </select>
-        </div>
         </div>
 
         <div class="d-flex justify-content-evenly py-2 mb-4">
