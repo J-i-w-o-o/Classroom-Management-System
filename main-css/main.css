@@ -51,8 +51,9 @@ body {
 .x--wrapper .x--header .x--header-menu .x--sidebar-btn {
   color: #fbf3ff;
   padding-left: 0px;
+  padding-top: 3;
   position: absolute;
-  margin-left: 205px;
+  margin-left: 180px;
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;

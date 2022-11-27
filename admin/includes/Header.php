@@ -63,7 +63,7 @@ require('../Components/upload.php');
     <!-- custom/vanilla css -->
     <link rel="stylesheet" href="../main-css/userManage.css" />
     <link rel="stylesheet" href="../main-css/aboutUs.css" />
-    <link rel="stylesheet" href="../main-css/nav.css" />
+    <link rel="stylesheet" href="../main-css/main.css" />
 
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
