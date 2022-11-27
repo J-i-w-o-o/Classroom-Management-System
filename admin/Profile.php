@@ -12,18 +12,28 @@ require('includes/Header.php');
 
   <div class="container">
     <div class="row d-flex justify-content-center">
-      <?php
-      if (isset($_GET['error'])) { ?>
+    <div class="alert alert-warning" style="visibility: invisible ;" role="alert" id="toggleshow">
+        Please Input Email / Phone Number Before Logging out! Go to <a style="text-decoration: none;border-bottom: 1px solid;" href="" data-toggle="modal" data-target="#editProfile" class="alert-link"><u>Edit profile</u>
+        <button type="button" hidden class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+          </button>
+      </a>
+      </div>
 
-        <div class="alert alert-danger d-inline p-2 text-center" role="alert">
-          <button type="button" class="btn-close btn-close-dark" data-dismiss="alert" aria-label="Close"></button>
-          <?= $_GET['error'] ?>
-        </div>
-      <?php } ?>
+
 
       <div class="col md-10 mt-5 pt-5">
         <div class="row z-depth-3">
-          <div class="col-sm-4 bg-dark bg-gradient">
+          <div class="col-sm-4 bg-dark bg-gradient rounded">
+            
+      <?php
+      if (isset($_GET['error'])) { ?>
+
+        <div class="alert alert-danger p-2 text-center" role="alert">
+          <button type="button" class="btn-close btn-close" data-dismiss="alert" aria-label="Close"></button>
+          <?= $_GET['error'] ?>
+        </div>
+      <?php } ?>
             <div class="card-block text-center text-white my-5">
               <div class="my-5 mx-5 pictureContainer">
                 <?php
@@ -68,11 +78,11 @@ require('includes/Header.php');
               <div class="editProfile text-center mt-5 pt-3">
                 <button type="button" class="btn btn-success fs-5 my-2" data-toggle="modal" data-target="#editProfile">
                   <i class="fa-solid fa-user"></i>
-                  <span class="editProfile  ">EDIT PROFILE</span>
+                  <span class="editProfile ">EDIT PROFILE</span>
                 </button>
                 <button type="button" class="btn btn-danger fs-5 my-2" data-toggle="modal" data-target="#changepassword">
                   <i class="fa-solid fa-key"></i>
-                  <span class="editProfile  ">CHANGE PASSWORD</span>
+                  <span class="editProfile">CHANGE PASSWORD</span>
                 </button>
               </div>
             </div>

@@ -11,7 +11,7 @@
                         <i class="fas fa-bars"></i>
                     </div>
                     <ul>
-                        <li><a href="Profile.php"><i class="fas fa-user"></i></a></li>
+                        <li><a href="Profile.php" onclick="return uncheck()"><i class="fas fa-user"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -82,12 +82,25 @@
                         </a>
                     </li>
                     <li class="x--item">
-                        <a href="../Components/logout.php" class="x--menu-btn">
-                            <i class="fas fa-power-off"></i><span>Logout</span>
-                        </a>
+                        <?php
+
+                        if (empty($email) || empty($phone)){
+                            
+                        ?>
+                            <a href="Profile.php" class="x--menu-btn" onclick="return check()">
+                            
+                            <?php
+                             
+
+                        } else { ?>
+                                <a href="../Components/logout.php" class="x--menu-btn">
+                                <?php
+
+                            } ?>
+                                <i class="fas fa-power-off"></i><span>Logout</span>
+                                </a>
                     </li>
                 </div>
             </div>
             <!--sidebar end-->
             <!--main container start-->
-
