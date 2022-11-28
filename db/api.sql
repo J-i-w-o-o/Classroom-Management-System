@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 01:49 AM
+-- Generation Time: Nov 28, 2022 at 09:08 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -48,6 +48,38 @@ INSERT INTO `admins` (`id`, `school_id`, `first_name`, `last_name`, `status`) VA
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `classes`
+--
+
+CREATE TABLE `classes` (
+  `class_id` int(11) NOT NULL,
+  `class_code` varchar(50) NOT NULL,
+  `section` varchar(50) NOT NULL,
+  `subject_code` varchar(50) NOT NULL,
+  `school_id` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `classes`
+--
+
+INSERT INTO `classes` (`class_id`, `class_code`, `section`, `subject_code`, `school_id`, `created_at`) VALUES
+(1, 'TITE', 'BSCS-1A', 'GEC 001', '', '2022-11-28 13:21:54'),
+(2, 'CLJ 121-TNEZwL', 'BSCS-3A', 'CLJ 121', '', '2022-11-28 14:53:11'),
+(3, 'A2-6HLc1E', 'BSCS-3A', 'A2', '', '2022-11-28 15:01:17'),
+(4, 'ABC 321-alzB65', 'BSCS-3A', 'ABC 321', '', '2022-11-28 15:11:51'),
+(5, 'ACC 226-lx9vU9', 'BSCS-3A', 'ACC 226', '', '2022-11-28 15:14:53'),
+(6, 'CCS 107-neMJLW', 'BSCS-3A', 'CCS 107', '', '2022-11-28 15:15:18'),
+(7, 'A3-163KdK', 'BSCS-3A', 'A3', '202000143726', '2022-11-28 17:16:24'),
+(8, 'ABC 402-oUpmmR', 'BSCS-3A', 'ABC 402', '202000143726', '2022-11-28 17:51:14'),
+(9, 'ACC 122-TxVSb2', 'BSCS-3A', 'ACC 122', '202000143726', '2022-11-28 17:51:18'),
+(10, 'ADGE 001-WTBlex', 'BSCS-3A', 'ADGE 001', '202000143726', '2022-11-28 17:51:22'),
+(11, 'ABC 121-5pOnth', 'BSCS-3A', 'ABC 121', '202000143726', '2022-11-28 18:05:19');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `instructors`
 --
 
@@ -56,16 +88,18 @@ CREATE TABLE `instructors` (
   `school_id` varchar(100) NOT NULL,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `class_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `instructors`
 --
 
-INSERT INTO `instructors` (`id`, `school_id`, `first_name`, `last_name`, `status`) VALUES
-(4, 'Instructor1', 'Miku', 'Miku', 1),
-(5, 'Instructor2', 'Jiwoo', 'Jiwoo', 1);
+INSERT INTO `instructors` (`id`, `school_id`, `first_name`, `last_name`, `status`, `class_id`) VALUES
+(4, 'Instructor1', 'Miku', 'Miku', 1, 0),
+(5, 'Instructor2', 'Jiwoo', 'Jiwoo', 1, 0),
+(6, '202000143726', 'Instructor', 'Garcia', 1, 7);
 
 -- --------------------------------------------------------
 
@@ -90,7 +124,8 @@ INSERT INTO `profileimg` (`id`, `school_id`, `status`) VALUES
 (86, 'admin02', 1),
 (87, 'Instructor2', 1),
 (88, 'test', 0),
-(89, 'admin03', 0);
+(89, 'admin03', 0),
+(90, '202000143726', 1);
 
 -- --------------------------------------------------------
 
@@ -123,16 +158,17 @@ CREATE TABLE `students` (
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `section` varchar(100) NOT NULL,
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `class_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `school_id`, `first_name`, `last_name`, `section`, `status`) VALUES
-(33, '20201138-M', 'Andriel', 'Gabriel', 'BSCS-3A', 1),
-(34, '20201132-M', 'Jiwoo', 'Gabriel', 'BSCS-3A', 1);
+INSERT INTO `students` (`id`, `school_id`, `first_name`, `last_name`, `section`, `status`, `class_id`) VALUES
+(33, '20201138-M', 'Andriel', 'Gabriel', 'BSCS-3A', 1, 0),
+(34, '20201132-M', 'Jiwoo', 'Gabriel', 'BSCS-3A', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1589,7 +1625,8 @@ INSERT INTO `users` (`id`, `uid`, `school_id`, `first_name`, `last_name`, `passw
 (81, '', 'admin02', 'geo', 'gab', '$2y$10$D9DwBYdvmYwN2hHqm1LRu.uLVfRJeeDo1MiJVap0Hg6TO1pbJTzkm', 'admin', '', ''),
 (82, '', 'Instructor2', 'gab', 'geo', '$2y$10$DI0J076CD7dQtKgTHnZoqe4FFHq0TNC20dCF8pyQ/zszO0cHh0rGe', 'instructor', '', ''),
 (83, '', 'test', 'titwe', 'tite', '$2y$10$nnDVQeRe7eO0M/mmgppmZ.FSQY3IIlI8dscf.JlKg.z7WF7lX5vl.', 'admin', 'test@gmail.com', '09234234242'),
-(84, '', 'admin03', 'Daniel', 'Sigue', '$2y$10$TuoCAJtIciTT/8muG1f8Pefo74XsfSBp4eHEkznXa6TuR4uojGS3i', 'admin', 'danielsigue@gmail.com', '09123456789');
+(84, '', 'admin03', 'Daniel', 'Sigue', '$2y$10$TuoCAJtIciTT/8muG1f8Pefo74XsfSBp4eHEkznXa6TuR4uojGS3i', 'admin', 'danielsigue@gmail.com', '09123456789'),
+(85, '', '202000143726', 'Instructor', 'Garcia', '$2y$10$BERHzvfC.AXMGQxpBLGiOeBSOHWd/3x3hBgctb.a8HyKqGrud4Lde', 'instructor', '', '');
 
 --
 -- Indexes for dumped tables
@@ -1600,6 +1637,12 @@ INSERT INTO `users` (`id`, `uid`, `school_id`, `first_name`, `last_name`, `passw
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `classes`
+--
+ALTER TABLE `classes`
+  ADD PRIMARY KEY (`class_id`);
 
 --
 -- Indexes for table `instructors`
@@ -1648,16 +1691,22 @@ ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
+-- AUTO_INCREMENT for table `classes`
+--
+ALTER TABLE `classes`
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `instructors`
 --
 ALTER TABLE `instructors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `profileimg`
 --
 ALTER TABLE `profileimg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `sections`
@@ -1681,7 +1730,7 @@ ALTER TABLE `subjects`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
