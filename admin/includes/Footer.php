@@ -17,11 +17,9 @@
                         console.log($('#btnEdit').data('edit-id'));
                     }
                 });
-                $('#tableView').DataTable({
-                    "pageLength": 10,
-                    "lengthChange": false,
-                    responsive: true
-                });
+
+
+
 
                 function onlyNumberKey(evt) {
 
@@ -31,17 +29,16 @@
                         return false;
                     return true;
                 }
-                const toggleBtn =document.querySelector('toggleShow');
-                const showDiv =document.querySelector('.alertShow');
+                const toggleBtn = document.querySelector('toggleShow');
+                const showDiv = document.querySelector('.alertShow');
 
                 toggleBtn.addEventListener('click', () => {
-                    if(showDiv.style.display === 'none'){
+                    if (showDiv.style.display === 'none') {
                         showDiv.stle.display = 'block';
-                    }else{
+                    } else {
                         showDiv.style.display = 'none';
                     }
                 });
-
             </script>
             </body>
 

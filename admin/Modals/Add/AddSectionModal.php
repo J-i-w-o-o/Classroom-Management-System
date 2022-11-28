@@ -15,7 +15,7 @@
 
         <div class="input-group mb-4">
           <span class="input-group-text" id="basic-addon1">Section</span>
-          <input type="text" class="form-control" placeholder="Section" aria-label="section" aria-describedby="basic-addon1" name="course" required>
+          <input type="text" class="form-control" placeholder="Section" aria-label="section" aria-describedby="basic-addon1" name="section" required>
         </div>
 
         <div class="d-flex justify-content-around mt-4">
