@@ -4,11 +4,11 @@ require('../Components/Database.php');
 
 if(isset($_SESSION['user'])){
     if($_SESSION['role']=='admin'){
-        header('Location: \Classroom-Management-System\admin\dashboard.php');
+        header('Location: ./../admin/dashboard.php');
         die;
       }
       else if($_SESSION['role']=='student'){
-        header('Location: \Classroom-Management-System\student\dashboard.php');
+        header('Location: ./../student/dashboard.php');
         die;
       }
       else if($_SESSION['role']=='instructor'){
