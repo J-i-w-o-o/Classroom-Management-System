@@ -1,57 +1,53 @@
 <?php
-    require('includes/Header.php');
-
-    
+  require('includes/Header.php');    
 ?>
 
 <div class="x--main-container">
 
-  <div class="container-fluid bg-white">
-    <!-- DAPAT NAKA MODAL TONG FORM NATO -->
-    <form action="./instructor_components/create_class.php">
-    <select name="section" id="inputGroupSection" class="custom-select">
-            <?php
+  <!-- CREATE CLASS MODAL -->
+  <?php require './Modals/Add/CreateClassModal.php'; ?>
 
-            $sections = $con->query("SELECT * FROM sections");
-            if ($sections->num_rows > 0) {
-              while ($row = $sections->fetch_assoc()) { ?>
-                <option value="<?php echo $row['course'] . "-" . $row['section'] ?>" name="section"><?php echo $row['course'] . "-" . $row['section'] ?></option>
-              <?php
-              }
-            } else { ?>
-              <option value="" name="section">no section records</option>
-            <?php
-            }
-            ?>
-          </select>
-          <select name="subjectcode" id="subjectcodes" class="custom-select">
-            <?php
-
-            $sections = $con->query("SELECT * FROM subjects");
-            if ($sections->num_rows > 0) {
-              while ($row = $sections->fetch_assoc()) { ?>
-                <option value="<?php echo $row['subject_code']?>" name="subjectcode" id="selected"><?php echo $row['subject_code'] ?></option>
-              <?php
-              }
-            } else { ?>
-              <option value="" name="section">no section records</option>
-            <?php
-            }
-            ?>
-          </select>
-      <input type="submit" value="Add Class">
-      <input type="text" name="subjectcode"id="subjectcode" />
-      <h1 id="display"></h1>
-      <h1 id="displaySubject"></h1>
-    </form>
-    <div>
-      <?php 
-
-      if(isset($_SESSION['subjectSelected'])){
-        echo $_SESSION['subjectSelected'] + "TEST";
-      }
-      ?>
+  <div class="container bg-white">
+    
+    <div class="container text-end pd-5">
+      <button type="button" class="btn btn-success  mb-3 mt-2 fs-6" data-toggle="modal" data-target="#studentModal">
+        <i class="fa-solid fa-plus"></i> Create Class
+      </button>
     </div>
+
+    <div class="pb-5">
+      <h1 class="text-center">My Classes</h1>
+      <div class="container ">
+      <div class="row bg-light d-flex pb-3 shadow-sm rounded">
+        <?php 
+          $sql = "SELECT * FROM classes WHERE school_id='". $school_id ."'";
+          $res = $con->query($sql);
+          while($row = $res->fetch_assoc()){
+            ?>
+            <!-- loop happening here... -->
+            <div class="col pt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://imageio.forbes.com/specials-images/imageserve/5d7a6f9ec0e1890008d139b9/classroom/960x0.jpg?format=jpg&width=960" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">subject: <?php echo $row['subject_code'] ?></h4>
+                  <p class="card-text"><?php echo $row['section'] ?></p>
+                  <p class="card-text">code: <?php echo $row['class_code'] ?></p>
+
+                  <!-- this view course hindi pa nagagawa -->
+                  <a href="#" class="btn btn-primary">View Course</a>
+                </div>
+              </div>
+            </div>
+
+          <?php
+          }
+        ?>
+      </div>
+      </div>
+      
+      
+    </div>
+
   </div>
 </div>
 
