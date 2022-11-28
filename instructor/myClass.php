@@ -5,53 +5,42 @@
 ?>
 
 <div class="x--main-container">
-
-  <div class="container-fluid bg-white">
+  <?php require './Modals/Add/CreateClassModal.php'; ?>
+  <div class="container bg-white">
     <!-- DAPAT NAKA MODAL TONG FORM NATO -->
-    <form action="./instructor_components/create_class.php">
-    <select name="section" id="inputGroupSection" class="custom-select">
-            <?php
-
-            $sections = $con->query("SELECT * FROM sections");
-            if ($sections->num_rows > 0) {
-              while ($row = $sections->fetch_assoc()) { ?>
-                <option value="<?php echo $row['course'] . "-" . $row['section'] ?>" name="section"><?php echo $row['course'] . "-" . $row['section'] ?></option>
-              <?php
-              }
-            } else { ?>
-              <option value="" name="section">no section records</option>
-            <?php
-            }
-            ?>
-          </select>
-          <select name="subjectcode" id="subjectcodes" class="custom-select">
-            <?php
-
-            $sections = $con->query("SELECT * FROM subjects");
-            if ($sections->num_rows > 0) {
-              while ($row = $sections->fetch_assoc()) { ?>
-                <option value="<?php echo $row['subject_code']?>" name="subjectcode" id="selected"><?php echo $row['subject_code'] ?></option>
-              <?php
-              }
-            } else { ?>
-              <option value="" name="section">no section records</option>
-            <?php
-            }
-            ?>
-          </select>
-      <input type="submit" value="Add Class">
-      <input type="text" name="subjectcode"id="subjectcode" />
-      <h1 id="display"></h1>
-      <h1 id="displaySubject"></h1>
-    </form>
-    <div>
-      <?php 
-
-      if(isset($_SESSION['subjectSelected'])){
-        echo $_SESSION['subjectSelected'] + "TEST";
-      }
-      ?>
+    
+    <div class="container text-end pd-5">
+      <button type="button" class="btn btn-success  mb-3 mt-2 fs-6" data-toggle="modal" data-target="#studentModal">
+        <i class="fa-solid fa-plus"></i> Create Class
+      </button>
     </div>
+
+    <div>
+      <h1>cards</h1>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+        One of three columns
+        </div>
+        <div class="col-sm">
+        One of three columns
+        </div>
+        <div class="col-sm">
+        One of three columns
+        </div>
+      </div>
+      
+    </div>
+
   </div>
 </div>
 

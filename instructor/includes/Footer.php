@@ -32,7 +32,7 @@
         $('#subjectcodes').on('change', function(){
             $.ajax({
             type: "POST",
-            url: "subjecthandle.php",
+            url: "./instructor_components/subjecthandle.php",
             data: "subjectcode="+$(this).find('option:selected').text(),
             success: function(data){
                 $("#display").html(data);

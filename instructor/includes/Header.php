@@ -25,6 +25,8 @@ $school_id  =   $_SESSION['school_id'];
 $first_name =   $_SESSION['first_name'];
 $last_name  =   $_SESSION['last_name'];
 $role       =   $_SESSION['role'];
+$email      =   $_SESSION['email'];
+$phone      =   $_SESSION['phone'];
 require('../Components/upload.php');
 
 
@@ -46,6 +48,10 @@ require('../Components/upload.php');
     <!-- local bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <script src="../js/bootstrap.min.js"></script>
+
+    <!-- for Modals -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- custom/vanilla css -->
     <link rel="stylesheet" href="../main-css/userManage.css"/>
