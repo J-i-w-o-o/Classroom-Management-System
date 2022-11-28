@@ -58,7 +58,7 @@ if (!$id || !$school_id || !$first_name || !$last_name)
               last_name='$last_name'
               WHERE id='$id'"
             );
-            echo '<script>window.location.href="insturctorManage.php"</script>';
+            echo '<script>window.location.href="instru  ctorManage.php"</script>';
           }
           ?>
         </div>
