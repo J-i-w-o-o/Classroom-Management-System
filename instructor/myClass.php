@@ -34,7 +34,7 @@
                   <p class="card-text">code: <?php echo $row['class_code'] ?></p>
 
                   <!-- this view course hindi pa nagagawa -->
-                  <a href="#" class="btn btn-primary">View Course</a>
+                  <a href="<?php echo "viewCourse.php?subject_code=".$row['subject_code']."&id=".$row['class_id'] ?>" class="btn btn-primary">View Course</a>
                 </div>
               </div>
             </div>
