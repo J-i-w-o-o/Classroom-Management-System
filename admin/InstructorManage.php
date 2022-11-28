@@ -15,7 +15,7 @@
     <div class="container-lg p-1 bg-white rounded">
       <div class="container text-end pd-5">
         <button type="button" class="btn btn-success  mb-3 mt-2 fs-6" data-toggle="modal" data-target="#instructorModal">
-          <i class="fa-solid fa-plus"></i> Add Student
+          <i class="fa-solid fa-plus"></i> Add Instructor
         </button>
       </div>
       <div class="container text-start pd-5" id="instructor_wrapper">

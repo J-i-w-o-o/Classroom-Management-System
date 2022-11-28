@@ -7,15 +7,6 @@
             $(".x--wrapper").toggleClass("x--collapse");
         });
 
-        $(function () {
-            $("#table").bootstrapTable()
-        });
-
-        function handleEdit(button){
-            $(this).data('edit-id');
-            console.log($('#btnEdit').data('edit-id'));
-        }
-
         $("#subjectcode").keyup(function(){
             var searchText = $(this).val();
             console.log("test")
@@ -37,13 +28,21 @@
             $("#subjectcode").val($(this).text());
             $("#show-list").html("");
         });
+
+        $('#subjectcodes').on('change', function(){
+            $.ajax({
+            type: "POST",
+            url: "subjecthandle.php",
+            data: "subjectcode="+$(this).find('option:selected').text(),
+            success: function(data){
+                $("#display").html(data);
+            }
+            });
+        })
+
     });
-    
-    $('#tableView').DataTable( {
-        "pageLength": 10,
-        "lengthChange": false,
-    responsive: true
-} );
+
+   
 </script>
 </body>
 </html>
