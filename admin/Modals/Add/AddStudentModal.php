@@ -13,7 +13,7 @@
           <input type="text" class="form-control" placeholder="School ID" aria-label="SchoolID" aria-describedby="basic-addon1" name="schoolID" required>
         </div>
 
-        <div class="input-group mb-4">
+        < 
           <span class="input-group-text">First Name</span>
           <input type="text" aria-label="Firstname" placeholder="First Name" class="form-control" name="firstName" required>
 

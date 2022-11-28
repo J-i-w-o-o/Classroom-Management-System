@@ -40,7 +40,6 @@ require('../Components/upload.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
     <script src="https://kit.fontawesome.com/e630d1fe84.js" crossorigin="anonymous"></script>
-    <script src="jquery.bootstrap-growl.min.js" crossorigin="anonymous"></script>
 
     <!-- local bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
