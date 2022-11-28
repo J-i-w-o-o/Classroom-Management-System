@@ -8,14 +8,13 @@
                         $(".x--wrapper").toggleClass("x--collapse");
                     });
 
-                    $(function() {
-                        $("#table").bootstrapTable()
-                    });
-
                     function handleEdit(button) {
                         $(this).data('edit-id');
                         console.log($('#btnEdit').data('edit-id'));
                     }
+
+                        var table = $('#studentView').DataTable();
+
                 });
 
 
