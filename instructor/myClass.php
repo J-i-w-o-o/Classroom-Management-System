@@ -24,13 +24,15 @@
           while($row = $res->fetch_assoc()){
             ?>
             <!-- loop happening here... -->
-            <div class="col-lg-4 col-sm-1">
+            <div class="col-lg-4 col-md-1 col-sm-1">
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://imageio.forbes.com/specials-images/imageserve/5d7a6f9ec0e1890008d139b9/classroom/960x0.jpg?format=jpg&width=960" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">subject: <?php echo $row['subject_code'] ?></h5>
                   <h5 class="card-text">section: <?php echo $row['section'] ?></h5>
-                  <a href="#" class="btn btn-primary">View Course</a>
+
+                  <!-- this view course hindi pa nagagawa -->
+                  <!-- <a href="#" class="btn btn-primary">View Course</a> -->
                 </div>
               </div>
             </div>
