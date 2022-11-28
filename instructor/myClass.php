@@ -16,23 +16,25 @@
     </div>
 
     <div class="pb-5">
-      <h1>cards</h1>
-      <div class="row">
+      <h1 class="text-center">My Classes</h1>
+      <div class="container ">
+      <div class="row bg-light d-flex pb-3 shadow-sm rounded">
         <?php 
           $sql = "SELECT * FROM classes WHERE school_id='". $school_id ."'";
           $res = $con->query($sql);
           while($row = $res->fetch_assoc()){
             ?>
             <!-- loop happening here... -->
-            <div class="col-lg-4 col-md-1 col-sm-1">
+            <div class="col pt-3">
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://imageio.forbes.com/specials-images/imageserve/5d7a6f9ec0e1890008d139b9/classroom/960x0.jpg?format=jpg&width=960" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">subject: <?php echo $row['subject_code'] ?></h5>
-                  <h5 class="card-text">section: <?php echo $row['section'] ?></h5>
+                  <h4 class="card-title">subject: <?php echo $row['subject_code'] ?></h4>
+                  <p class="card-text"><?php echo $row['section'] ?></p>
+                  <p class="card-text">code: <?php echo $row['class_code'] ?></p>
 
                   <!-- this view course hindi pa nagagawa -->
-                  <!-- <a href="#" class="btn btn-primary">View Course</a> -->
+                  <a href="#" class="btn btn-primary">View Course</a>
                 </div>
               </div>
             </div>
@@ -41,6 +43,8 @@
           }
         ?>
       </div>
+      </div>
+      
       
     </div>
 
