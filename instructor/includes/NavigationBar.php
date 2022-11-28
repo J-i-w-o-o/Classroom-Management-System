@@ -48,24 +48,20 @@
                             <i class="fas fa-desktop"></i><span>Dashboard</span>
                         </a>
                     </li>
+                    
                     <li class="x--item" id="profile">
                         <a href="#profile" class="x--menu-btn">
-                            <i class="fas fa-user-circle"></i><span>Manage Users&nbsp;&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                            <i class="fas fa-user-circle"></i><span>My Classrooms&nbsp;&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </a>
                         <div class="x--sub-menu">
-                            <a href="studentManage.php"><i class="fa-solid fa-user-gear"></i><span>Student</span></a>
-                            <a href="instructorManage.php"><i class="fa-solid fa-user-gear"></i><span>Teacher</span></a>
-                            <a href="adminManage.php"><i class="fa-solid fa-user-gear"></i><span>Admin</span></a>
+                            <a href="myClass.php"><i class="fa-solid fa-user-gear"></i><span>My Class</span></a>
+                            <a href="instructorManage.php"><i class="fa-solid fa-user-gear"></i><span>Archive Class</span></a>
                         </div>
                     </li>
-                    <li class="x--item" id="messages">
-                        <a href="#messages" class="x--menu-btn">
-                            <i class="fa-solid fa-chalkboard-user"></i><span>Manage Class &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                    <li class="x--item">
+                        <a href="dashboard.php" class="x--menu-btn">
+                            <i class="fas fa-desktop"></i><span>My Students</span>
                         </a>
-                        <div class="x--sub-menu">
-                            <a href="sectionManage.php"><i class="fa-solid fa-user-group"></i><span>Manage Section</span></a>
-                            <a href="subjectManage.php"><i class="fa-solid fa-user-group"></i><span>Manage Subjects</span></a>
-                        </div>
                     </li>
                     <li class="x--item" id="settings">
                         <a href="#settings" class="x--menu-btn">
@@ -75,11 +71,6 @@
                             <a href="#"><i class="fa-solid fa-eye"></i><span>View files</span></a>
                             <a href="#"><i class="fa-sharp fa-solid fa-bars-progress"></i><span>Modify Files</span></a>
                         </div>
-                    </li>
-                    <li class="x--item">
-                        <a href="aboutUs.php" class="x--menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About Us</span>
-                        </a>
                     </li>
                     <li class="x--item">
                         <a href="../Components/logout.php" class="x--menu-btn">
