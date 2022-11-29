@@ -2,36 +2,34 @@
    <div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
-               <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
-                   <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                   </button>
-               </div>
-               <div class="modal-body pb-4">
-                   <form method="post" class="bg-light border border-primary rounded px-5">
-                       <!-- ADD STUDENT MODAL -->
-                       <h1 class="text-center pt-3 fw-bold fst-italic">Edit Profile</h1>
 
-                       <div class="input-group mb-5 px-1">
+               <div class="modal-body border border-primary rounded p-5">
+
+                   <form method="post" class="bg-light">
+
+                       <!-- ADD STUDENT MODAL -->
+                       <h1 class="text-center fw-bold mb-5">Change Password</h1>
+
+                       <div class="input-group mb-4">
                            <span class="input-group-text">Old Password</span>
                            <input value="" type="password" maxlength="12" aria-label="Password" placeholder="Old Password" class="form-control" name="oldPassword" required>
 
                        </div>
-                       <div class="input-group mb-5 px-1">
+                       <div class="input-group mb-4">
                            <span class="input-group-text">New Password</span>
                            <input value="" type="password" maxlength="12" aria-label="Password" placeholder="New Password" class="form-control" name="newPassword" required>
 
                        </div>
-                       <div class="input-group mb-5 px-1">
-                           <span class="input-group-text">Retype New Password</span>
-                           <input value="" type="Password" maxlength="12" aria-label="Password" placeholder="Re-type Password" class="form-control" name="password" required>
+                       <div class="input-group mb-5">
+                           <span class="input-group-text">Re-type New Password</span>
+                           <input value="" type="Password" maxlength="12" aria-label="Password" placeholder="Re-type New Password" class="form-control" name="password" required>
                        </div>
                        <!-- SECTION IS DROP DOWN -->
 
 
-                       <div class="d-flex justify-content-center py-2 mb-4">
-                           <input type="submit" name="changePassword" class="btn btn-primary btn-lg mx-2" value="Change"></input>
-                           <a href="profile.php"><input type="button" class="btn btn-danger btn-lg mx-2" value="Close"></input></a>
+                       <div class="d-flex justify-content-around mt-4">
+                           <input type="submit" name="changePassword" class="btn btn-success btn-lg" value="Save"></input>
+                           <a href="profile.php"><input type="button" class="btn btn-danger btn-lg" data-dismiss="modal" value="Close"></input></a>
                        </div>
 
                    </form>

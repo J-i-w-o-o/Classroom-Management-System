@@ -11,6 +11,7 @@ if (!$id || !$school_id1 || !$first_name1 || !$last_name1)
 
 ?>
 <div class="x--main-container">
+  
   <!-- Modal -->
   <div class="container pt-5">
     <div class="modal-container-fluid d-flex justify-content-center">

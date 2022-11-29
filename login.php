@@ -14,7 +14,7 @@ require('./Components/LoginChecker.php') ?>
 
 <body>
   <div class="center">
-    <h1 class="h1">LOGIN</h1>
+    <h1 class="loginHeader h1">LOGIN</h1>
     <form method="post">
       <?php
       if (isset($_GET['error'])){ ?>
@@ -32,12 +32,12 @@ require('./Components/LoginChecker.php') ?>
       <div class="txt_field">
         <input type="password" name="password" required>
         <span></span>
-        <label>Password</label>
+        <label class="h1">Password</label>
       </div>
-      <div class="pass">Forgot Password?</div>
+      <div class="pass text-end">Forgot Password?</div>
       <input type="submit" value="Login" name="submit">
       <div class="signup_link">
-        Don't have an account?<a href="#">Send an Email</a>
+        Don't have an account? <a href="#">Send an Email</a>
 
     </form>
   </div>
