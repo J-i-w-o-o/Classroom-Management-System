@@ -10,6 +10,7 @@
     <?php 
       require './Modals/Add/AddAdminModal.php';// Add Admin Modal Pop-up
     ?>
+
  <div class="container pt-4">
     <div class="container-lg p-1 bg-white rounded">
       <div class="container text-end pd-5">
@@ -32,6 +33,7 @@
     </div>
   </div>
 </div>
+
 <script>
   $(document).ready(function() {
     var table = $('#adminView ').DataTable({

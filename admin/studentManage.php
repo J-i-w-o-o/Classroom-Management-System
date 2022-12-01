@@ -35,6 +35,7 @@ require('includes/Header.php');
     </div>
   </div>
 </div>
+
 <script>
   $(document).ready(function() {
     var table = $('#studentView ').DataTable({
@@ -96,6 +97,7 @@ require('includes/Header.php');
 
   });
 </script>
+
 <?php
 require('includes/Footer.php');
 ?>

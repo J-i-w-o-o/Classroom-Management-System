@@ -3,15 +3,13 @@
 ?>
 
 <div class="x--main-container">    
+    
+    <!-- Modal Imports -->
+    <?php 
+      require './Modals/Add/usersStatistics.php';// Users Statistics Modal Pop-up
+    ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!----css3---->
+    <!----CSS3---->
     <link rel="stylesheet" href="../main-css/dashboard.css">
 
     <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
@@ -19,176 +17,183 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-	<!--google material icon-->
+	<!--Google Material Icon-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
-</head>
+    <!--Google Material Icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <body>
     
-    
 <div class="wrapper">
-
-
-<div class="body-overlay"></div>
+        <div class="main-content">
 			
-			
-			<div class="main-content">
-			
+            <!-- Row of Boxes Start -->
 			<div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header">
-                                    <div class="icon icon-warning">
-                                       <span class="material-icons">equalizer</span>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category"><strong>Visits</strong></p>
-                                    <h3 class="card-title">70,340</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons text-info">info</i>
-                                        <a href="#pablo">See detailed report</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header">
-                                    <div class="icon icon-rose">
-                                       <span class="material-icons">shopping_cart</span>
 
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category"><strong>Orders</strong></p>
-                                    <h3 class="card-title">102</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">local_offer</i> Product-wise sales
-                                    </div>
-                                </div>
+                <!-- 1st Box: Total Number of Registered Users -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-warning">
+                                <i class="fa-solid fa-users fs-2 align-top"></i>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header">
-                                    <div class="icon icon-success">
-                                        <span class="material-icons">
-attach_money
-</span>
 
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category"><strong>Revenue</strong></p>
-                                    <h3 class="card-title">$23,100</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">date_range</i> Weekly sales
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card-content text-end">
+                            <p class="category"><strong>Users</strong></p>
+                            <h3 class="card-title">
+
+                                <?php 
+                                    require 'databaseDashboard.php';
+
+                                    $queryStudents = "SELECT id FROM students ORDER BY id";
+                                    $queryInstructors = "SELECT id FROM instructors ORDER BY id";
+                                    $queryAdmins = "SELECT id FROM admins ORDER BY id";
+
+                                    $query_runStudents = mysqli_query($connection, $queryStudents);
+                                    $query_runInstructors = mysqli_query($connection, $queryInstructors);
+                                    $query_runAdmins = mysqli_query($connection, $queryAdmins);
+
+                                    $countStudents = mysqli_num_rows($query_runStudents);
+                                    $countInstructors = mysqli_num_rows($query_runInstructors);
+                                    $countAdmins = mysqli_num_rows($query_runAdmins);
+
+                                    echo $countStudents + $countInstructors + $countAdmins ;
+                                ?>       
+
+                            </h3>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header">
-                                    <div class="icon icon-info">
-                                    
-<span class="material-icons">
-follow_the_signs
-</span>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category"><strong>Followers</strong></p>
-                                    <h3 class="card-title">+245</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">update</i> Just Updated
-                                    </div>
-                                </div>
+
+                        <div class="card-footer text-center">
+                            <div class="stats" data-toggle="modal" data-target="#usersStatistics">
+                                <i class="material-icons text-info">info</i>
+                                <a href="#">See More</a>
                             </div>
                         </div>
                     </div>
-					
-					
-					<div class="row ">
-                        <div class="col-lg-7 col-md-12">
-                            <div class="card" style="min-height: 485px">
-                                <div class="card-header card-header-text">
-                                    <h4 class="card-title">Employees Stats</h4>
-                                    <p class="category">New employees on 15th December, 2016</p>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="text-primary">
-                                            <tr><th>ID</th>
-                                            <th>Name</th>
-                                            <th>Salary</th>
-                                            <th>Country</th>
-                                        </tr></thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Bob Williams</td>
-                                                <td>$23,566</td>
-                                                <td>USA</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Mike Tyson</td>
-                                                <td>$10,200</td>
-                                                <td>Canada</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Tim Sebastian</td>
-                                                <td>$32,190</td>
-                                                <td>Netherlands</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Philip Morris</td>
-                                                <td>$31,123</td>
-                                                <td>Korea, South</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Minerva Hooper</td>
-                                                <td>$23,789</td>
-                                                <td>South Africa</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Hulk Hogan</td>
-                                                <td>$43,120</td>
-                                                <td>Netherlands</td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td>Angelina Jolie </td>
-                                                <td>$12,140</td>
-                                                <td>Australia</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                </div>
+
+                <!-- 2nd Box: Total Number of Instructors  -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-warning">
+                                <i class="fa-solid fa-chalkboard-user fs-2 align-top"></i>
                             </div>
                         </div>
-                      
-                        <div class="col-lg-5 col-md-12">
+                        <div class="card-content text-end">
+                            <p class="category"><strong>Instructors</strong></p>
+                            <h3 class="card-title">
+
+                                <?php 
+                                    require 'databaseDashboard.php';
+                                    $query = "SELECT id FROM instructors ORDER BY id";
+                                    $query_run = mysqli_query($connection, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo $row;
+                                ?>       
+
+                            </h3>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="stats">
+                                <i class="material-icons text-info">info</i>
+                                <a href="InstructorManage.php">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3rd Box: Total Number of Students  --> 
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-warning fs-2">
+                                <div class="userStudent"><i class="fa-solid fa-user-large align-top"></i></div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Students</strong></p>
+                            <h3 class="card-title">
+                                <?php 
+                                    require 'databaseDashboard.php';
+                                    $query = "SELECT id FROM students ORDER BY id";
+                                    $query_run = mysqli_query($connection, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo $row;
+                                ?>       
+                            </h3>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="stats">
+                                <i class="material-icons text-info">info</i>
+                                <a href="studentManage.php">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Box: Total Number of Courses  -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-warning fs-2">
+                                <i class="fa-sharp fa-solid fa-graduation-cap align-top"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Courses</strong></p>
+                            <h3 class="card-title">38</h3>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="stats">
+                                <i class="material-icons text-info">info</i>
+                                <a href="#">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Row of Boxes End -->
+            </div>
+					
+            <!-- Data Tables & Calendar of Activities Start -->
+            <div class="row">
+
+                <!-- Data Tables Start -->
+                <div class="col-lg-7 col-md-12">
+
+                    <div class="card" style="min-height: 485px">
+                        <div class="card-header card-header-text text-center" id="dataTables">
+                            <a onclick="instructors()" href="#" class="dataTables btn-lg active" role="button" aria-pressed="true">Instructors</a>
+                            <a onclick="students()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Students</a>
+                            <a onclick="courses()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Courses</a>
+                            <a onclick="subjects()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Subjects</a>
+                        </div>
+
+                            <div class="card-content table-responsive">
+                                    
+
+
+                            </div>
+                    </div>
+                
+                <!-- Data Tables End -->
+                </div>
+            
+                <!-- Calendar of Activities Start -->
+                <div class="col-lg-5 col-md-12">
+
                             <div class="card" style="min-height: 485px">
                                 <div class="card-header card-header-text">
-                                    <h4 class="card-title">Activities</h4>
+                                    <h4 class="card-title">Calendar of Activities</h4>
                                 </div>
+
                                 <div class="card-content">
                                     <div class="streamline">
+                                        
                                         <div class="sl-item sl-primary">
                                             <div class="sl-content">
                                                 <small class="text-muted">5 mins ago</small>
@@ -225,20 +230,19 @@ follow_the_signs
                                                 <p>John has finished his task</p>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </div>
+
+                <!-- Calendar of Activities End -->
+                </div>
+
+            <!-- Data Tables & Calendar of Activities End -->
+            </div>
 					
-					
-						
-					
-					
-					</div>
         </div>
-    </div>
+</div>
   
     <script type="text/javascript">
     $(document).ready(function () {
@@ -252,6 +256,22 @@ follow_the_signs
                 });
                 
             });
+
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("dataTables");
+    var btns = header.getElementsByClassName("dataTables");
+    for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+    }
+
+    function instructors() {
+        
+    }
+
     </script>
 
 </body>

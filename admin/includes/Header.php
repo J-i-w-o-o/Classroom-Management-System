@@ -89,12 +89,6 @@ require('../Components/upload.php');
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
 
-    <!-- Dashboard
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script> -->
-
 </head>
 <?php
 require('NavigationBar.php');
