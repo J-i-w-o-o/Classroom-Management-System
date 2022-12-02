@@ -166,18 +166,41 @@
                 <div class="col-lg-7 col-md-12">
 
                     <div class="card" style="min-height: 485px">
+
                         <div class="card-header card-header-text text-center" id="dataTables">
-                            <a onclick="instructors()" href="#" class="dataTables btn-lg active" role="button" aria-pressed="true">Instructors</a>
-                            <a onclick="students()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Students</a>
-                            <a onclick="courses()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Courses</a>
-                            <a onclick="subjects()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Subjects</a>
+                            <form method="post">
+
+                                <input type="submit" name="studentsButtonShow" value="Students"/>
+                                <input type="submit" name="instructorsButtonShow" value="Instructors"/>
+                                <input type="submit" name="adminsButtonShow" value="Admins"/>
+
+                            </form>
+                            <!-- <a href="#" onclick="students();" class="dataTables btn-lg active" role="button" aria-pressed="true">Students</a>
+                            <a onclick="instructors()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Instructors</a>
+                            <a onclick="courses()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Admins</a>
+                            <a onclick="subjects()" href="#" class="dataTables btn-lg" role="button" aria-pressed="true">Subjects</a> -->
                         </div>
 
                             <div class="card-content table-responsive">
-                                    
-
+                                <?php
+                                    // $studentsPreview = file_get_contents('studentsButtonShow.php');
+                                    // echo $studentsPreview;
+                                    if(isset($_POST['studentsButtonShow'])) {
+                                        $studentsPreview = file_get_contents('studentsButtonShow.php');
+                                        echo $studentsPreview;
+                                    }
+                                    if(isset($_POST['instructorsButtonShow'])) {
+                                        $instructorsPreview = file_get_contents('instructorsButtonShow.php');
+                                        echo $instructorsPreview;
+                                    }
+                                    if(isset($_POST['adminsButtonShow'])) {
+                                        $adminsPreview = file_get_contents('adminsButtonShow.php');
+                                        echo $adminsPreview;
+                                    }
+                                ?>
 
                             </div>
+                        
                     </div>
                 
                 <!-- Data Tables End -->
@@ -188,48 +211,13 @@
 
                             <div class="card" style="min-height: 485px">
                                 <div class="card-header card-header-text">
-                                    <h4 class="card-title">Calendar of Activities</h4>
+                                    <h4 class="card-title">For Lease (Wanted Poster)</h4>
                                 </div>
 
                                 <div class="card-content">
                                     <div class="streamline">
                                         
-                                        <div class="sl-item sl-primary">
-                                            <div class="sl-content">
-                                                <small class="text-muted">5 mins ago</small>
-                                                <p>Williams has just joined Project X</p>
-                                            </div>
-                                        </div>
-                                        <div class="sl-item sl-danger">
-                                            <div class="sl-content">
-                                                <small class="text-muted">25 mins ago</small>
-                                                <p>Jane has sent a request for access to the project folder</p>
-                                            </div>
-                                        </div>
-                                        <div class="sl-item sl-success">
-                                            <div class="sl-content">
-                                                <small class="text-muted">40 mins ago</small>
-                                                <p>Kate added you to her team</p>
-                                            </div>
-                                        </div>
-                                        <div class="sl-item">
-                                            <div class="sl-content">
-                                                <small class="text-muted">45 minutes ago</small>
-                                                <p>John has finished his task</p>
-                                            </div>
-                                        </div>
-                                        <div class="sl-item sl-warning">
-                                            <div class="sl-content">
-                                                <small class="text-muted">55 mins ago</small>
-                                                <p>Jim shared a folder with you</p>
-                                            </div>
-                                        </div>
-                                        <div class="sl-item">
-                                            <div class="sl-content">
-                                                <small class="text-muted">60 minutes ago</small>
-                                                <p>John has finished his task</p>
-                                            </div>
-                                        </div>
+
 
                                     </div>
                                 </div>
@@ -245,6 +233,7 @@
 </div>
   
     <script type="text/javascript">
+
     $(document).ready(function () {
                 $('#sidebarCollapse').on('click', function () {
                     $('#sidebar').toggleClass('active');
@@ -266,10 +255,6 @@
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
     });
-    }
-
-    function instructors() {
-        
     }
 
     </script>

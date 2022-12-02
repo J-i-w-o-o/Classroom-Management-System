@@ -4,23 +4,23 @@ require('includes/Header.php');
 ?>
 
 <div class="x--main-container">
-  <style>
-  
-  </style>
 
   <!-- modal imports -->
   <?php
   require './Modals/Add/AddStudentModal.php'; // Add Student Modal Pop-up
   ?>
+
   <div class="container pt-4">
     <div class="container-lg p-1 bg-white rounded">
+
       <div class="container text-end pd-5">
         <button type="button" class="btn btn-success  mb-3 mt-2 fs-6" data-toggle="modal" data-target="#studentModal">
           <i class="fa-solid fa-plus"></i> Add Student
         </button>
       </div>
+
       <div class="container text-start pd-5" id="student_wrapper">
-        <table id="studentView" class=" table-bordered display responsive compact table table-striped" width="100%  ">
+        <table id="studentView" class="table-bordered display responsive compact table table-striped" width="100%  ">
           <thead>
             <tr>
               <th class="">ID</th>
@@ -32,6 +32,7 @@ require('includes/Header.php');
           </thead>
         </table>
       </div>
+
     </div>
   </div>
 </div>
@@ -90,7 +91,6 @@ require('includes/Header.php');
         },
       }]
       
- 
     });
     table.buttons().container()
       .appendTo('#student_wrapper .col-md-6:eq(0)');

@@ -18,6 +18,7 @@
           <i class="fa-solid fa-plus"></i> Add Admin
         </button>
       </div>
+
       <div class="container text-start pd-5" id="admin_wrapper">
         <table id="adminView" class=" table-bordered display responsive compact table table-striped" width="100%  ">
           <thead>
@@ -30,6 +31,7 @@
           </thead>
         </table>
       </div>
+      
     </div>
   </div>
 </div>
